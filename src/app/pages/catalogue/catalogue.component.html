@@ -1,0 +1,131 @@
+<app-header></app-header>
+
+<div class="catalogue-container">
+  <!-- Filters Section -->
+  <aside class="filters-sidebar" [class.mobile-open]="mobileFiltersOpen()">
+    <div class="filters-header">
+      <h3>Filters</h3>
+      <button class="close-filters" (click)="toggleMobileFilters()">✕</button>
+    </div>
+
+    <!-- Search -->
+    <div class="filter-group">
+      <label>Search</label>
+      <input 
+        type="text" 
+        placeholder="Search products..." 
+        [(ngModel)]="searchTerm"
+        class="search-input"
+      />
+    </div>
+
+    <!-- Category -->
+    <div class="filter-group">
+      <label>Category</label>
+      <select [(ngModel)]="selectedCategory" class="filter-select">
+        <option value="">All Categories</option>
+        <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+      </select>
+    </div>
+
+    <!-- Occasion -->
+    <div class="filter-group">
+      <label>Occasion</label>
+      <select [(ngModel)]="selectedOccasion" class="filter-select">
+        <option value="">All Occasions</option>
+        <option *ngFor="let occ of occasions" [value]="occ">{{ occ }}</option>
+      </select>
+    </div>
+
+    <!-- Condition -->
+    <div class="filter-group">
+      <label>Condition</label>
+      <select [(ngModel)]="selectedCondition" class="filter-select">
+        <option value="">All Conditions</option>
+        <option *ngFor="let cond of conditions" [value]="cond">{{ cond }}</option>
+      </select>
+    </div>
+
+    <!-- Price Range -->
+    <div class="filter-group">
+      <label>Max Price: ₹{{ priceRange() }}</label>
+      <input 
+        type="range" 
+        min="100" 
+        max="5000" 
+        [(ngModel)]="priceRange"
+        class="price-slider"
+      />
+    </div>
+
+    <!-- Sort -->
+    <div class="filter-group">
+      <label>Sort By</label>
+      <select [(ngModel)]="sortBy" class="filter-select">
+        <option value="relevance">Relevance</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="newest">Newest First</option>
+      </select>
+    </div>
+
+    <button (click)="clearFilters()" class="clear-btn">Clear All Filters</button>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="catalogue-main">
+    <!-- Topbar -->
+    <div class="catalogue-topbar">
+      <div class="topbar-left">
+        <a routerLink="/" class="back-btn">← Back to Home</a>
+        <h1>Products</h1>
+      </div>
+      <button class="mobile-filter-toggle" (click)="toggleMobileFilters()">☰ Filters</button>
+    </div>
+
+    <!-- Results Count -->
+    <div class="results-info">
+      <p>Showing <strong>{{ filteredProducts().length }}</strong> product<span *ngIf="filteredProducts().length !== 1">s</span></p>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid" *ngIf="filteredProducts().length > 0; else noProducts">
+      <div *ngFor="let product of filteredProducts()" class="product-card">
+        <div class="product-image">
+          <img [src]="product.image" [alt]="product.title" />
+          <span class="status-badge" [class.rented]="product.status === 'Rented'">
+            {{ product.status || 'Available' }}
+          </span>
+          <span class="condition-badge">{{ product.condition }}</span>
+        </div>
+        <div class="product-info">
+          <p class="product-brand">{{ product.brand }}</p>
+          <h3 class="product-title">{{ product.title }}</h3>
+          <div class="product-meta">
+            <span class="product-category">{{ product.category }}</span>
+            <span class="product-occasion">{{ product.occasion }}</span>
+          </div>
+          <div class="product-pricing">
+            <div class="rental-info">
+              <span class="label">Rental for {{ product.rentalDays }} days:</span>
+              <span class="price">₹{{ product.price }}</span>
+            </div>
+            <div class="security-info">
+              <span class="label">Security Deposit:</span>
+              <span class="deposit">₹{{ product.securityDeposit }}</span>
+            </div>
+          </div>
+          <a [routerLink]="['/product', product.id]" class="view-btn">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- No Products Message -->
+    <ng-template #noProducts>
+      <div class="no-products">
+        <p>No products match your filters. Try adjusting your search criteria.</p>
+        <button (click)="clearFilters()" class="clear-btn">Clear Filters</button>
+      </div>
+    </ng-template>
+  </div>
+</div>

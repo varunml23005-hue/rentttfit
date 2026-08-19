@@ -1,0 +1,180 @@
+
+<div class="sidebar">
+
+  <!-- =========================================
+       RENTFITS BRAND
+  ========================================== -->
+
+  <div class="brand">
+
+    <div class="brand-icon">
+      <i class="fas fa-hanger"></i>
+    </div>
+
+    <div class="brand-text">
+      <h1>RENTFITS</h1>
+      <span>Your Style. Your Fit.</span>
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       SEARCH
+  ========================================== -->
+
+  <div class="search-section">
+
+    <div class="search-box">
+
+      <i class="fas fa-tshirt"></i>
+
+      <input
+        type="text"
+        placeholder="Search conversations..."
+        [(ngModel)]="searchText"
+        (input)="searchChats()">
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       CHAT TITLE
+  ========================================== -->
+
+  <div class="chat-heading">
+
+    <span>MESSAGES</span>
+
+    <span class="chat-count">
+      {{ filteredChats.length }}
+    </span>
+
+  </div>
+
+
+  <!-- =========================================
+       CHAT LIST
+  ========================================== -->
+
+  <div class="chat-list">
+
+    <div
+      *ngFor="let chat of filteredChats"
+      class="chat-card"
+      [class.active]="selectedChatId === chat.id"
+      (click)="selectChat(chat)">
+
+
+      <!-- =====================================
+           AVATAR
+      ====================================== -->
+
+      <div class="avatar-wrapper">
+
+        <img
+          [src]="chat.avatar"
+          class="avatar"
+          [alt]="chat.name">
+
+        <span
+          class="status-dot"
+          *ngIf="chat.online">
+        </span>
+
+      </div>
+
+
+      <!-- =====================================
+           CHAT DETAILS
+      ====================================== -->
+
+      <div class="chat-details">
+
+
+        <!-- ===================================
+             NAME + TIME + PIN
+        ==================================== -->
+
+        <div class="top-row">
+
+          <h3>
+            {{ chat.name }}
+          </h3>
+
+
+          <!-- RIGHT SIDE -->
+
+          <div class="chat-time-area">
+
+            <!-- TIME -->
+
+            <span class="time">
+
+              {{
+                chat.messages.length > 0
+                  ? chat.messages[chat.messages.length - 1].time
+                  : ''
+              }}
+
+            </span>
+
+
+            <!-- PIN -->
+
+            <button
+              type="button"
+              class="pin-btn"
+              [class.pinned]="chat.pinned"
+              (click)="togglePin(chat, $event)"
+              [attr.title]="
+                chat.pinned
+                  ? 'Unpin chat'
+                  : 'Pin chat'
+              ">
+
+              <i class="fas fa-thumbtack"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- ===================================
+             SHOP
+        ==================================== -->
+
+        <p class="shop">
+          {{ chat.shop }}
+        </p>
+
+
+        <!-- ===================================
+             LAST MESSAGE
+        ==================================== -->
+
+        <p class="last-message">
+
+          {{
+            chat.messages.length > 0
+              ? (
+                  chat.messages[chat.messages.length - 1].text
+                  || '📷 Photo'
+                )
+              : 'No messages yet'
+          }}
+
+        </p>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

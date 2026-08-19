@@ -1,0 +1,113 @@
+<header class="topbar">
+  <div class="topbar-inner">
+    <a routerLink="/" class="brand">
+      <span class="brand-mark">RF</span>
+      <span class="brand-text">RentFits<small>Wear More, Spend Less</small></span>
+    </a>
+    <div class="page-links">
+      <a routerLink="/" class="back-link">← Back to Home</a>
+      <a routerLink="/catalogue" class="back-link">Back to Catalogue</a>
+    </div>
+  </div>
+</header>
+
+<main class="detail-page" *ngIf="product; else notFound">
+  <div class="gallery">
+    <img [src]="selectedImage()" [alt]="product.title" />
+    <div class="status-overlay" *ngIf="product.status">{{ product.status }}</div>
+    <div class="thumbs" *ngIf="product.images.length > 1">
+      <button
+        type="button"
+        class="thumb"
+        *ngFor="let image of product.images"
+        [class.active]="selectedImage() === image"
+        (click)="selectImage(image)"
+      >
+        <img [src]="image" [alt]="product.title" />
+      </button>
+    </div>
+  </div>
+
+  <div class="info">
+    <span class="badge">{{ product.category }}</span>
+    <h1>{{ product.title }}</h1>
+    <p class="text-muted">by {{ product.brand }}</p>
+
+    <div class="price-block">
+      <strong>₹{{ product.price }}</strong>
+      <span class="text-muted">/ {{ product.rentalDays }} Days</span>
+      <span class="text-muted">&nbsp;• ₹{{ product.securityDeposit }} refundable deposit</span>
+    </div>
+
+    <p class="desc">{{ product.description }}</p>
+
+    <div class="field">
+      <label>Size</label>
+      <div class="chip-row">
+        <button
+          *ngFor="let s of product.sizes"
+          class="chip"
+          [class.active]="selectedSize === s"
+          (click)="selectedSize = s"
+        >
+          {{ s }}
+        </button>
+      </div>
+    </div>
+
+    <div class="meta-grid">
+      <div>
+        <span class="meta-label">Condition</span>
+        <span>{{ product.condition }}</span>
+      </div>
+      <div>
+        <span class="meta-label">Occasion</span>
+        <span>{{ product.occasion }}</span>
+      </div>
+      <div>
+        <span class="meta-label">Location</span>
+        <span>📍 {{ product.owner.location }}</span>
+      </div>
+      <div>
+        <span class="meta-label">Listed by</span>
+        <span>{{ product.owner.name }}</span>
+      </div>
+    </div>
+
+    <div class="contact-actions">
+      <button class="btn btn-primary" (click)="toggleChat()">
+        💬 {{ chatOpen() ? 'Close Chat' : 'Chat in RentFits' }}
+      </button>
+      <a class="btn btn-whatsapp" [href]="whatsappLink()" target="_blank" rel="noopener">
+        Chat on WhatsApp
+      </a>
+    </div>
+
+    <div class="chat-panel" *ngIf="chatOpen()">
+      <div class="chat-note text-muted">
+        Demo chat — messages stay in your browser and aren't sent anywhere yet.
+      </div>
+      <div class="chat-messages">
+        <div class="bubble" [class.mine]="m.from === 'me'" *ngFor="let m of messages()">
+          {{ m.text }}
+        </div>
+      </div>
+      <div class="chat-input">
+        <input
+          type="text"
+          placeholder="Type a message..."
+          [(ngModel)]="draft"
+          (keyup.enter)="sendMessage()"
+        />
+        <button class="btn btn-primary sm" (click)="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<ng-template #notFound>
+  <main class="detail-page not-found">
+    <p class="text-muted">Item not found.</p>
+    <a routerLink="/catalogue" class="btn btn-outline">Back to Catalogue</a>
+  </main>
+</ng-template>

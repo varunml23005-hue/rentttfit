@@ -1,0 +1,148 @@
+<div class="chat-container">
+
+  <!-- HEADER -->
+  <app-chat-header [chat]="chat"></app-chat-header>
+
+  <!-- MESSAGES -->
+  <div class="messages">
+
+    <div
+      *ngFor="let msg of chat.messages"
+      class="message"
+      [ngClass]="{
+        'user-message': msg.sender === 'user',
+        'owner-message': msg.sender === 'owner'
+      }"
+    >
+
+      <!-- ================================
+           TEXT MESSAGE
+      ================================= -->
+
+      <div
+        *ngIf="msg.text"
+        class="bubble"
+        [class.typing-bubble]="msg.typing"
+      >
+
+        <div class="message-text">
+          {{ msg.text }}
+        </div>
+
+        <!-- QUICK REPLY BUTTONS -->
+        <div
+          class="chat-options"
+          *ngIf="msg.options && !msg.typing"
+        >
+
+          <button
+            *ngFor="let option of msg.options"
+            type="button"
+            class="chat-option"
+            (click)="selectChatOption(option)"
+          >
+            {{ option.label }}
+          </button>
+
+        </div>
+
+        <!-- TEXT TIME + TICKS -->
+        <div
+          class="message-info"
+          *ngIf="msg.sender === 'user'"
+        >
+
+          <span class="time">
+            {{ msg.time }}
+          </span>
+
+          <span
+  class="ticks"
+  [class.delivered]="msg.delivered"
+  [class.read]="msg.read"
+  *ngIf="msg.sender === 'user'"
+>
+  {{ msg.delivered ? '✓✓' : '✓' }}
+</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================================
+           IMAGE MESSAGE
+      ================================= -->
+
+      <div
+        *ngIf="msg.image"
+        class="image-bubble"
+        (click)="openImage(msg.image)"
+      >
+
+        <img
+          [src]="msg.image"
+          class="chat-image"
+          alt="Sent image"
+        >
+
+        <!-- IMAGE TIME + TICKS -->
+        <div class="image-info">
+
+          <span>
+            {{ msg.time }}
+          </span>
+
+          <span
+  class="ticks"
+  [class.delivered]="msg.delivered"
+  [class.read]="msg.read"
+  *ngIf="msg.sender === 'user'"
+>
+  {{ msg.delivered ? '✓✓' : '✓' }}
+</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- MESSAGE INPUT -->
+  <app-message-input
+    [chat]="chat">
+  </app-message-input>
+
+
+  <!-- ================================
+       FULL SCREEN IMAGE PREVIEW
+  ================================= -->
+
+  <div
+    class="image-preview-overlay"
+    *ngIf="selectedImage"
+    (click)="closeImage()"
+  >
+
+    <!-- CLOSE BUTTON -->
+    <button
+      type="button"
+      class="image-preview-close"
+      (click)="closeImage(); $event.stopPropagation()"
+    >
+      ×
+    </button>
+
+    <!-- LARGE IMAGE -->
+    <img
+      [src]="selectedImage"
+      class="image-preview-image"
+      alt="Image preview"
+      (click)="$event.stopPropagation()"
+    >
+
+  </div>
+
+</div>

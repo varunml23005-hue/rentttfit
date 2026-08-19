@@ -1,0 +1,77 @@
+<div class="message-input-wrapper">
+
+  <!-- Emoji Picker -->
+  <div
+    class="emoji-picker"
+    *ngIf="showEmojiPicker">
+
+    <emoji-mart
+      [enableSearch]="true"
+      [showPreview]="true"
+      [emojiSize]="24"
+      [perLine]="9"
+      [darkMode]="false"
+      color="#ed3b78"
+      title="Choose an emoji"
+      emoji="smile"
+      (emojiClick)="addEmoji($event)">
+    </emoji-mart>
+
+  </div>
+
+
+  <!-- Actual WhatsApp-style input bar -->
+  <div class="message-input">
+
+    <!-- Emoji -->
+    <button
+      class="icon-btn emoji-btn"
+      type="button"
+      (click)="toggleEmojiPicker()">
+
+      😊
+
+    </button>
+
+
+    <!-- Image file -->
+    <input
+      type="file"
+      #fileInput
+      accept="image/*"
+      hidden
+      (change)="onImageSelected($event)">
+
+
+    <!-- Attachment -->
+    <button
+      class="icon-btn attachment-btn"
+      type="button"
+      (click)="fileInput.click()">
+
+      📎
+
+    </button>
+
+
+    <!-- Text -->
+    <input
+      type="text"
+      [(ngModel)]="newMessage"
+      (keyup.enter)="sendMessage()"
+      placeholder="Type a message...">
+
+
+    <!-- Send -->
+    <button
+      class="send-btn"
+      type="button"
+      (click)="sendMessage()">
+
+      ➤
+
+    </button>
+
+  </div>
+
+</div>
