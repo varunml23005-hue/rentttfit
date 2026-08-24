@@ -1,18 +1,27 @@
 <header class="site-header">
 
-  <!-- TOP HEADER -->
+  <!-- =====================================================
+       TOP HEADER
+  ====================================================== -->
+
   <div class="header-main">
 
     <!-- LOGO -->
-    <button class="brand" type="button" (click)="goHome()">
+    <button
+      class="brand"
+      type="button"
+      (click)="goHome()"
+    >
 
       <div class="hanger-logo">
+
         <svg
           viewBox="0 0 70 60"
           xmlns="http://www.w3.org/2000/svg"
           aria-label="RentFits logo"
         >
-          <!-- hanger hook -->
+
+          <!-- HANGER HOOK -->
           <path
             d="M35 5
                C35 2 39 1 41 4
@@ -23,7 +32,7 @@
             stroke-linecap="round"
           />
 
-          <!-- hanger -->
+          <!-- HANGER -->
           <path
             d="M37 12
                L64 34
@@ -38,7 +47,7 @@
             stroke-linecap="round"
           />
 
-          <!-- center line -->
+          <!-- CENTER LINE -->
           <path
             d="M35 12 V51"
             fill="none"
@@ -48,17 +57,46 @@
           />
 
         </svg>
+
       </div>
 
       <div class="brand-text">
-        <div class="brand-name">RentFits</div>
-        <div class="brand-tagline">Wear More. Spend Less.</div>
+
+        <div class="brand-name">
+          RentFits
+        </div>
+
+        <div class="brand-tagline">
+          Wear More. Spend Less.
+        </div>
+
       </div>
 
     </button>
 
 
-    <!-- SEARCH -->
+    <!-- =====================================================
+         MOBILE MENU BUTTON
+    ====================================================== -->
+
+    <button
+      class="mobile-menu-button"
+      type="button"
+      (click)="toggleMobileMenu()"
+      aria-label="Open menu"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <!-- =====================================================
+         SEARCH
+    ====================================================== -->
+
     <div class="search-container">
 
       <input
@@ -74,35 +112,50 @@
         (click)="search()"
         aria-label="Search"
       >
+
         <span class="search-icon"></span>
+
       </button>
 
     </div>
 
 
-    <!-- HEADER ACTIONS -->
+    <!-- =====================================================
+         DESKTOP HEADER ACTIONS
+    ====================================================== -->
+
     <div class="header-actions">
 
-      <!-- SELLER -->
+      <!-- BECOME A SELLER -->
       <button
         class="header-action"
         type="button"
         (click)="handleAction('Become a Seller')"
       >
+
         <div class="action-icon user-icon"></div>
-        <span>Become a Seller</span>
+
+        <span>
+          Become a Seller
+        </span>
+
       </button>
 
 
       <!-- MESSAGE -->
-      <button 
-  class="header-action" 
-  type="button" 
-  (click)="goToMessages()" 
->
-  <div class="action-icon message-icon"></div> 
-  <span>Message</span> 
-</button>
+      <button
+        class="header-action"
+        type="button"
+        (click)="goToMessages()"
+      >
+
+        <div class="action-icon message-icon"></div>
+
+        <span>
+          Message
+        </span>
+
+      </button>
 
 
       <!-- WISHLIST -->
@@ -111,95 +164,120 @@
         type="button"
         (click)="handleAction('Wishlist')"
       >
-        <div class="action-icon heart-icon">♡</div>
-        <span>Wishlist</span>
+
+        <div class="action-icon heart-icon">
+          ♡
+        </div>
+
+        <span>
+          Wishlist
+        </span>
+
       </button>
 
 
-      <!-- LOCATION -->
-<div class="location-dropdown">
+      <!-- =================================================
+           DESKTOP LOCATION
+      ================================================== -->
 
-  <button
-  class="header-action location-action"
-  type="button"
-  (click)="toggleLocationDropdown()"
->
-  <div class="action-icon location-icon">
-    <span class="location-pin"></span>
-  </div>
+      <div class="location-dropdown">
 
-  <span>{{ selectedLocation }}</span>
-</button>
+        <button
+          class="header-action location-action"
+          type="button"
+          (click)="toggleLocationDropdown()"
+        >
 
-  @if (locationDropdownOpen) {
+          <div class="action-icon location-icon">
 
-    <div class="location-menu">
+            <span class="location-pin"></span>
 
-      <div class="location-menu-title">
-        Select Location
+          </div>
+
+          <span>
+            {{ selectedLocation }}
+          </span>
+
+        </button>
+
+
+        @if (locationDropdownOpen) {
+
+          <div class="location-menu">
+
+            <div class="location-menu-title">
+              Select Location
+            </div>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Mumbai')"
+            >
+              Mumbai
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Delhi')"
+            >
+              Delhi
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Bengaluru')"
+            >
+              Bengaluru
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Hyderabad')"
+            >
+              Hyderabad
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Chennai')"
+            >
+              Chennai
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Kolkata')"
+            >
+              Kolkata
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Pune')"
+            >
+              Pune
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Jaipur')"
+            >
+              Jaipur
+            </button>
+
+          </div>
+
+        }
+
       </div>
-
-      <button
-        type="button"
-        (click)="selectLocation('Mumbai')"
-      >
-        Mumbai
-      </button>
-
-      <button
-        type="button"
-        (click)="selectLocation('Delhi')"
-      >
-        Delhi
-      </button>
-
-      <button
-        type="button"
-        (click)="selectLocation('Bengaluru')"
-      >
-        Bengaluru
-      </button>
-
-      <button
-        type="button"
-        (click)="selectLocation('Hyderabad')"
-      >
-        Hyderabad
-      </button>
-
-      <button
-        type="button"
-        (click)="selectLocation('Chennai')"
-      >
-        Chennai
-      </button>
-
-      <button
-        type="button"
-        (click)="selectLocation('Kolkata')"
-      >
-        Kolkata
-      </button>
-
-      <button
-        type="button"
-        (click)="selectLocation('Pune')"
-      >
-        Pune
-      </button>
-
-      <button
-        type="button"
-        (click)="selectLocation('Jaipur')"
-      >
-        Jaipur
-      </button>
-
-    </div>
-
-  }
-
-</div>
 
 
       <!-- CART -->
@@ -208,11 +286,17 @@
         type="button"
         (click)="handleAction('Cart')"
       >
+
         <div class="action-icon cart-icon"></div>
 
-        <span class="cart-badge">2</span>
+        <span class="cart-badge">
+          2
+        </span>
 
-        <span>Cart</span>
+        <span>
+          Cart
+        </span>
+
       </button>
 
 
@@ -222,8 +306,13 @@
         type="button"
         (click)="handleAction('Sign in / Register')"
       >
+
         <div class="action-icon signin-icon"></div>
-        <span>Sign in / Register</span>
+
+        <span>
+          Sign in / Register
+        </span>
+
       </button>
 
     </div>
@@ -231,7 +320,10 @@
   </div>
 
 
-  <!-- NAVIGATION -->
+  <!-- =====================================================
+       DESKTOP NAVIGATION
+  ====================================================== -->
+
   <nav class="main-navigation">
 
     <button
@@ -298,5 +390,228 @@
     </button>
 
   </nav>
+
+
+  <!-- =====================================================
+       MOBILE MENU
+  ====================================================== -->
+
+  @if (mobileMenuOpen) {
+
+    <div class="mobile-menu">
+
+
+      <!-- WOMEN -->
+      <button
+        type="button"
+        (click)="navigate('Women')"
+      >
+        Women
+      </button>
+
+
+      <!-- MEN -->
+      <button
+        type="button"
+        (click)="navigate('Men')"
+      >
+        Men
+      </button>
+
+
+      <!-- KIDS -->
+      <button
+        type="button"
+        (click)="navigate('Kids')"
+      >
+        Kids
+      </button>
+
+
+      <!-- JEWELLERY -->
+      <button
+        type="button"
+        (click)="navigate('Jewellery')"
+      >
+        Jewellery
+      </button>
+
+
+      <!-- OCCASIONS -->
+      <button
+        type="button"
+        (click)="navigate('Occasions')"
+      >
+        Occasions
+      </button>
+
+
+      <!-- BRANDS -->
+      <button
+        type="button"
+        (click)="navigate('Brands')"
+      >
+        Brands
+      </button>
+
+
+      <!-- NEW ARRIVALS -->
+      <button
+        type="button"
+        (click)="navigate('New Arrivals')"
+      >
+        New Arrivals
+      </button>
+
+
+      <!-- HOW IT WORKS -->
+      <button
+        type="button"
+        (click)="navigate('How It Works')"
+      >
+        How It Works
+      </button>
+
+
+      <!-- =================================================
+           MOBILE LOCATION
+      ================================================== -->
+
+      <div class="mobile-location-section">
+
+        <button
+          type="button"
+          class="mobile-location-button"
+          (click)="toggleLocationDropdown()"
+        >
+
+          <span class="mobile-location-icon">
+            📍
+          </span>
+
+          <span>
+            {{ selectedLocation }}
+          </span>
+
+          <span class="mobile-location-arrow">
+            {{ locationDropdownOpen ? '▲' : '▼' }}
+          </span>
+
+        </button>
+
+
+        @if (locationDropdownOpen) {
+
+          <div class="mobile-location-menu">
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Mumbai')"
+            >
+              Mumbai
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Delhi')"
+            >
+              Delhi
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Bengaluru')"
+            >
+              Bengaluru
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Hyderabad')"
+            >
+              Hyderabad
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Chennai')"
+            >
+              Chennai
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Kolkata')"
+            >
+              Kolkata
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Pune')"
+            >
+              Pune
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Jaipur')"
+            >
+              Jaipur
+            </button>
+
+          </div>
+
+        }
+
+      </div>
+
+
+      <!-- =================================================
+           MOBILE MESSAGE
+      ================================================== -->
+
+      <button
+        type="button"
+        (click)="goToMessages()"
+      >
+        Message
+      </button>
+
+
+      <!-- =================================================
+           MOBILE CART
+      ================================================== -->
+
+      <button
+        type="button"
+        (click)="handleAction('Cart')"
+      >
+        Cart
+      </button>
+
+
+      <!-- =================================================
+           MOBILE SIGN IN
+      ================================================== -->
+
+      <button
+        type="button"
+        (click)="handleAction('Sign in / Register')"
+      >
+        Sign in / Register
+      </button>
+
+    </div>
+
+  }
 
 </header>

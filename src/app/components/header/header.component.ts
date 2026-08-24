@@ -17,6 +17,11 @@ export class HeaderComponent {
   // LOCATION
   locationDropdownOpen = false;
   selectedLocation = 'Location';
+  mobileMenuOpen = false;
+
+  toggleMobileMenu(): void {
+  this.mobileMenuOpen = !this.mobileMenuOpen;
+}
 
   toggleLocationDropdown(): void {
     this.locationDropdownOpen = !this.locationDropdownOpen;
