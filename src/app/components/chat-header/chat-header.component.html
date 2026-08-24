@@ -1,0 +1,69 @@
+<div class="chat-header">
+
+  <!-- LEFT SIDE -->
+  <div class="left">
+
+    <div class="avatar-wrapper">
+
+      <img
+        [src]="chat.avatar"
+        class="avatar">
+
+      <span
+        class="header-status"
+        *ngIf="chat.online">
+      </span>
+
+    </div>
+
+    <div class="user-info">
+
+      <h3>{{ chat.name }}</h3>
+
+      <p>{{ chat.shop }}</p>
+
+      <small
+        class="online"
+        *ngIf="chat.online">
+
+        <span>●</span> Online
+
+      </small>
+
+      <small
+        class="offline"
+        *ngIf="!chat.online">
+
+        Last seen recently
+
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <!-- RIGHT SIDE -->
+  <div class="right">
+
+  <button class="icon-btn whatsapp" title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </button>
+
+  <button class="icon-btn call" title="Call">
+    <i class="fas fa-phone"></i>
+  </button>
+
+  <button class="icon-btn email" title="Email">
+    <i class="fas fa-envelope"></i>
+  </button>
+
+  <button class="icon-btn more" title="More options">
+    <i class="fas fa-ellipsis-v"></i>
+  </button>
+
+</div>
+
+
+
+</div>

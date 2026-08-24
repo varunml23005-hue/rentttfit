@@ -1,0 +1,2870 @@
+/* =========================================
+   TOP CATEGORIES
+========================================= */
+
+.categories-section {
+  width: 100%;
+  padding: 26px 45px 30px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.categories-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.categories-header h2 {
+  margin: 0;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  color: #222;
+}
+
+
+/* =========================================
+   VIEW ALL
+========================================= */
+
+.view-all-btn {
+  border: none;
+  background: transparent;
+
+  padding: 5px 8px;
+
+  color: #ef3f73;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.view-all-btn:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   CATEGORY ROW
+========================================= */
+
+.categories-list {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   CATEGORY CARD
+========================================= */
+
+.category-card {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.category-image {
+  width: 78px;
+  height: 78px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  background: #f9dce3;
+
+  position: relative;
+}
+
+.category-image img {
+  width: 100%;
+  height: 115%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* =========================================
+   CATEGORY NAME
+========================================= */
+
+.category-card p {
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #222;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.category-card:hover .category-image {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.category-card:hover p {
+  color: #ef3f73;
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1400px) {
+
+  .categories-section {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+  .category-image {
+    width: 105px;
+    height: 105px;
+  }
+
+  .categories-list {
+    gap: 25px;
+  }
+}
+
+
+/* =========================================
+   SMALL DESKTOP
+========================================= */
+
+@media (min-width: 901px) and (max-width: 1399px) {
+
+  .category-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .categories-list {
+    gap: 16px;
+  }
+}
+/* =========================================
+   THREE COLLECTIONS
+========================================= */
+
+.three-collections {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  padding: 30px 45px 40px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   COLLECTION COLUMN
+========================================= */
+
+.collection-column {
+  min-width: 0;
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   COLLECTION HEADER
+========================================= */
+
+.collection-title {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+.collection-title h2 {
+  margin: 0;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color: #222222;
+}
+
+
+.view-all-btn {
+  border: none;
+
+  background: transparent;
+
+  padding: 4px 0;
+
+  color: #ef3f73;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.view-all-btn:hover {
+  text-decoration: underline;
+
+  color: #d92f60;
+}
+
+
+/* =========================================
+   PRODUCTS
+========================================= */
+
+.collection-items {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+}
+
+
+/* =========================================
+   PRODUCT
+========================================= */
+
+.mini-product {
+  min-width: 0;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.mini-product-image {
+  width: 100%;
+
+  height: 250px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #f7f7f7;
+}
+
+
+.mini-product-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center top;
+
+  transition: transform 0.3s ease;
+}
+
+
+.mini-product:hover .mini-product-image img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   PRODUCT INFO
+========================================= */
+
+.mini-product-info {
+  padding-top: 9px;
+}
+
+
+.mini-product-info h3 {
+  margin: 0 0 5px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #222222;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+.mini-product-info p {
+  margin: 0;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: #ef3f73;
+}
+
+
+.mini-product-info p span {
+  font-size: 10px;
+
+  font-weight: 400;
+
+  color: #777777;
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1400px) {
+
+  .three-collections {
+    padding-left: 55px;
+    padding-right: 55px;
+
+    gap: 35px;
+  }
+
+
+  .mini-product-image {
+    height: 280px;
+  }
+
+
+  .collection-title h2 {
+    font-size: 21px;
+  }
+
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 1000px) and (max-width: 1399px) {
+
+  .three-collections {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    gap: 22px;
+  }
+
+
+  .mini-product-image {
+    height: 220px;
+  }
+
+
+  .collection-title h2 {
+    font-size: 18px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 999px) {
+
+  .three-collections {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 25px;
+  }
+
+
+  .mini-product-image {
+    height: 280px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .three-collections {
+    padding: 20px 16px 30px;
+
+    gap: 30px;
+  }
+
+
+  .collection-title h2 {
+    font-size: 18px;
+  }
+
+
+  .collection-items {
+    gap: 12px;
+  }
+
+
+  .mini-product-image {
+    height: 210px;
+  }
+
+
+  .mini-product-info h3 {
+    font-size: 12px;
+  }
+
+}
+/* =========================================================
+   JEWELLERY COLLECTION
+========================================================= */
+
+.jewellery-section {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 20px 38px 30px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.jewellery-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+}
+
+
+.jewellery-header h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 18px;
+
+  line-height: 24px;
+
+  font-weight: 700;
+}
+
+
+.jewellery-view-all {
+  color: #ed3f70;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+
+.jewellery-view-all:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   JEWELLERY GRID
+   8 ITEMS IN ONE ROW
+========================================================= */
+
+.jewellery-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(8, minmax(0, 1fr));
+
+  gap: 10px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   JEWELLERY CARD
+========================================================= */
+
+.jewellery-card {
+  width: 100%;
+
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 7px;
+
+  padding-bottom: 7px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.jewellery-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 14px
+    rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   JEWELLERY IMAGE BOX
+========================================================= */
+
+.jewellery-image {
+  width: 100%;
+
+  height: 125px;
+
+  overflow: hidden;
+
+  background: #eeeeee;
+
+  border-radius:
+    6px
+    6px
+    0
+    0;
+}
+
+
+/* =========================================================
+   JEWELLERY IMAGE
+========================================================= */
+
+.jewellery-image img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  /*
+   * IMPORTANT:
+   * Cover fills the entire box.
+   * No stretching.
+   * Extra portions are cropped.
+   */
+  object-fit: cover;
+
+  /*
+   * Keeps the jewellery centered.
+   */
+  object-position: center 45%;
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
+
+.jewellery-info {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    0
+    7px;
+}
+
+
+/* =========================================================
+   PRODUCT NAME
+========================================================= */
+
+.jewellery-info h3 {
+  margin:
+    7px
+    0
+    3px;
+
+  color: #222222;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 10px;
+
+  line-height: 14px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.jewellery-price {
+  margin: 0;
+
+  color: #ed3f70;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 10px;
+
+  line-height: 14px;
+
+  font-weight: 600;
+}
+
+
+.jewellery-price span {
+  color: #555555;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   RATING
+========================================================= */
+
+.jewellery-rating {
+  margin:
+    3px
+    0
+    0;
+
+  color: #e6a900;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 8px;
+
+  line-height: 12px;
+}
+
+
+.jewellery-rating span {
+  color: #777777;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .jewellery-section {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  .jewellery-grid {
+    grid-template-columns:
+      repeat(8, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .jewellery-image {
+    height: 125px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .jewellery-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    row-gap: 14px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .jewellery-section {
+    padding:
+      18px
+      16px
+      25px;
+  }
+
+  .jewellery-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .jewellery-image {
+    height: 150px;
+  }
+}
+
+
+
+
+
+
+
+/* =========================================================
+   HOW RENTFITS WORKS
+   LARGER PROTOTYPE SIZE
+========================================================= */
+
+.how-rentfits-section {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 22px 38px 20px;
+
+  background: #ffffff;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.how-rentfits-section > h2 {
+  margin: 0 0 12px;
+
+  text-align: center;
+
+  color: #171717;
+
+  font-size: 21px;
+  line-height: 26px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FIRST ROW
+========================================================= */
+
+.how-works-main-row {
+
+  width: 100%;
+
+  min-height: 82px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  align-items: center;
+
+  background: #fff1f5;
+
+  border-radius: 10px;
+
+  box-sizing: border-box;
+
+  padding: 12px 20px;
+
+  margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   FIRST ROW ITEM
+========================================================= */
+
+.how-work-item {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   FIRST ROW ICON
+========================================================= */
+
+.how-work-icon {
+
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffe0e9;
+
+  color: #ed3f70;
+
+  font-size: 25px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   FIRST ROW TEXT
+========================================================= */
+
+.how-work-text {
+  min-width: 0;
+}
+
+
+.how-work-text h3 {
+
+  margin: 0 0 4px;
+
+  color: #222222;
+
+  font-size: 13px;
+
+  line-height: 16px;
+
+  font-weight: 700;
+}
+
+
+.how-work-text p {
+
+  margin: 0;
+
+  color: #555555;
+
+  font-size: 10px;
+
+  line-height: 14px;
+}
+
+
+/* =========================================================
+   SECOND ROW
+========================================================= */
+
+.how-works-benefits-row {
+
+  width: 100%;
+
+  min-height: 65px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  align-items: center;
+
+  background: #fff1f5;
+
+  border-radius: 10px;
+
+  box-sizing: border-box;
+
+  padding: 9px 20px;
+}
+
+
+/* =========================================================
+   BENEFIT ITEM
+========================================================= */
+
+.benefit-item {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   BENEFIT ICON
+========================================================= */
+
+.benefit-icon {
+
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffe0e9;
+
+  color: #ed3f70;
+
+  font-size: 20px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   BENEFIT TEXT
+========================================================= */
+
+.benefit-text {
+
+  min-width: 0;
+}
+
+
+.benefit-text h3 {
+
+  margin: 0 0 3px;
+
+  color: #222222;
+
+  font-size: 10px;
+
+  line-height: 13px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+.benefit-text p {
+
+  margin: 0;
+
+  color: #555555;
+
+  font-size: 8px;
+
+  line-height: 11px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .how-rentfits-section {
+    padding: 24px 45px 22px;
+  }
+
+
+  .how-rentfits-section > h2 {
+    font-size: 22px;
+    line-height: 28px;
+
+    margin-bottom: 13px;
+  }
+
+
+  .how-works-main-row {
+
+    min-height: 90px;
+
+    padding: 14px 24px;
+
+    margin-bottom: 11px;
+  }
+
+
+  .how-work-icon {
+
+    width: 54px;
+    height: 54px;
+
+    font-size: 27px;
+  }
+
+
+  .how-work-text h3 {
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+
+  .how-work-text p {
+
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+
+  .how-works-benefits-row {
+
+    min-height: 70px;
+
+    padding: 10px 24px;
+  }
+
+
+  .benefit-icon {
+
+    width: 45px;
+    height: 45px;
+
+    font-size: 21px;
+  }
+
+
+  .benefit-text h3 {
+
+    font-size: 11px;
+    line-height: 14px;
+  }
+
+
+  .benefit-text p {
+
+    font-size: 8px;
+    line-height: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .how-rentfits-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  .how-works-main-row {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 15px;
+  }
+
+
+  .how-works-benefits-row {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .how-rentfits-section {
+
+    padding:
+      18px
+      12px;
+  }
+
+
+  .how-works-main-row {
+
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    padding: 14px;
+  }
+
+
+  .how-works-benefits-row {
+
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    padding: 14px;
+  }
+
+
+  .how-work-item,
+  .benefit-item {
+
+    justify-content: flex-start;
+  }
+
+}
+
+
+
+
+/* =========================================================
+   RENTFITS APP DOWNLOAD SECTION
+========================================================= */
+
+.app-download-section {
+  width: 100%;
+  height: 280px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 0 70px;
+
+  margin: 30px 0 0;
+
+  background: #fde3e9;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =========================================================
+   GLOBAL BOX SIZING
+========================================================= */
+
+.app-download-section *,
+.app-download-section *::before,
+.app-download-section *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+.app-phone {
+  width: 230px;
+  height: 280px;
+
+  flex: 0 0 230px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: visible;
+}
+
+
+.app-phone img {
+  display: block;
+
+  width: 190px;
+  height: 270px;
+
+  max-width: none;
+  max-height: none;
+
+  object-fit: contain;
+
+  transform: rotate(-8deg);
+
+  filter:
+    drop-shadow(
+      0 7px 7px
+      rgba(0, 0, 0, 0.16)
+    );
+}
+
+
+/* =========================================================
+   APP CONTENT
+========================================================= */
+
+.app-content {
+  width: 470px;
+
+  flex: 0 0 470px;
+
+  margin-left: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+/* =========================================================
+   APP TITLE
+========================================================= */
+
+.app-title {
+  margin: 0;
+  padding: 0;
+
+  color: #111111;
+
+  font-size: 34px;
+  line-height: 38px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.8px;
+}
+
+
+.app-title span {
+  display: block;
+
+  margin: 0;
+
+  color: #ed3f70;
+
+  font-size: 34px;
+  line-height: 38px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   APP SUBTITLE
+========================================================= */
+
+.app-subtitle {
+  margin: 12px 0 17px;
+  padding: 0;
+
+  color: #222222;
+
+  font-size: 17px;
+  line-height: 22px;
+}
+
+
+/* =========================================================
+   STORE BUTTONS
+========================================================= */
+
+.app-store-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   STORE BUTTON
+========================================================= */
+
+.store-button {
+  position: relative;
+
+  width: 205px;
+  height: 62px;
+
+  flex: 0 0 205px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  background: #000000;
+
+  border: none;
+
+  border-radius: 7px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+/* =========================================================
+   STORE IMAGE
+========================================================= */
+
+.store-button img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+  max-height: none;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: fill;
+
+  object-position: center;
+
+  transform-origin: center center;
+}
+
+
+/* =========================================================
+   GOOGLE PLAY BADGE
+========================================================= */
+
+.google-play-button img {
+  transform: scale(1.55);
+}
+
+
+/* =========================================================
+   APP STORE BADGE
+========================================================= */
+
+.app-store-button img {
+  transform: scale(1.55);
+}
+
+
+/* =========================================================
+   STORE HOVER
+========================================================= */
+
+.store-button:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.92;
+}
+
+
+/* =========================================================
+   STORE ACTIVE
+========================================================= */
+
+.store-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.app-features {
+  flex: 1;
+
+  min-width: 400px;
+
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  justify-content: space-evenly;
+
+  gap: 25px;
+
+  margin-left: 25px;
+}
+
+
+/* =========================================================
+   FEATURE
+========================================================= */
+
+.app-feature {
+  width: 125px;
+
+  flex: 0 0 125px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   FEATURE ICON
+========================================================= */
+
+.feature-icon {
+  width: 66px;
+  height: 66px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 10px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #ed3f70;
+
+  font-size: 27px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   FEATURE TITLE
+========================================================= */
+
+.app-feature h3 {
+  margin: 0;
+  padding: 0;
+
+  color: #111111;
+
+  font-size: 15px;
+  line-height: 19px;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   FEATURE DESCRIPTION
+========================================================= */
+
+.app-feature p {
+  margin: 5px 0 0;
+  padding: 0;
+
+  color: #555555;
+
+  font-size: 12px;
+  line-height: 16px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   QR AREA
+========================================================= */
+
+.app-qr {
+  width: 250px;
+
+  flex: 0 0 250px;
+
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-left: 20px;
+}
+
+
+/* =========================================================
+   QR BOX
+========================================================= */
+
+.qr-image {
+  width: 125px;
+  height: 125px;
+
+  flex: 0 0 125px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px;
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   QR IMAGE
+========================================================= */
+
+.qr-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+  max-height: none;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   QR TEXT
+========================================================= */
+
+.app-qr p {
+  width: 90px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #222222;
+
+  font-size: 13px;
+  line-height: 18px;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .app-download-section {
+    height: 300px;
+
+    padding: 0 85px;
+  }
+
+
+  .app-phone {
+    width: 240px;
+
+    flex-basis: 240px;
+  }
+
+
+  .app-phone img {
+    width: 200px;
+    height: 285px;
+  }
+
+
+  .app-content {
+    width: 480px;
+
+    flex-basis: 480px;
+  }
+
+
+  .app-title,
+  .app-title span {
+    font-size: 36px;
+
+    line-height: 40px;
+  }
+
+
+  .app-features {
+    margin-left: 35px;
+  }
+
+
+  .app-qr {
+    width: 270px;
+
+    flex-basis: 270px;
+  }
+
+
+  .qr-image {
+    width: 135px;
+    height: 135px;
+
+    flex-basis: 135px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .app-download-section {
+    height: auto;
+
+    min-height: 280px;
+
+    padding: 25px 30px;
+  }
+
+
+  .app-phone {
+    width: 180px;
+
+    flex-basis: 180px;
+  }
+
+
+  .app-phone img {
+    width: 160px;
+    height: 240px;
+  }
+
+
+  .app-content {
+    width: 350px;
+
+    flex-basis: 350px;
+  }
+
+
+  .app-title,
+  .app-title span {
+    font-size: 28px;
+
+    line-height: 32px;
+  }
+
+
+  .app-features {
+    min-width: 300px;
+
+    margin-left: 15px;
+
+    gap: 10px;
+  }
+
+
+  .app-feature {
+    width: 100px;
+
+    flex-basis: 100px;
+  }
+
+
+  .app-qr {
+    width: 200px;
+
+    flex-basis: 200px;
+
+    margin-left: 10px;
+  }
+
+
+  .qr-image {
+    width: 100px;
+    height: 100px;
+
+    flex-basis: 100px;
+  }
+
+
+  .app-qr p {
+    font-size: 11px;
+
+    line-height: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .app-download-section {
+    height: auto;
+
+    min-height: 0;
+
+    flex-direction: column;
+
+    padding: 35px 20px;
+
+    gap: 30px;
+  }
+
+
+  .app-phone {
+    width: 180px;
+    height: 240px;
+
+    flex: none;
+  }
+
+
+  .app-phone img {
+    width: 165px;
+    height: 235px;
+  }
+
+
+  .app-content {
+    width: 100%;
+
+    flex: none;
+
+    margin-left: 0;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+
+  .app-store-buttons {
+    justify-content: center;
+  }
+
+
+  .app-features {
+    width: 100%;
+
+    min-width: 0;
+
+    flex-wrap: wrap;
+
+    margin-left: 0;
+  }
+
+
+  .app-qr {
+    width: auto;
+
+    flex: none;
+
+    margin-left: 0;
+  }
+
+}
+/* =========================================================
+   RENTFITS FOOTER
+========================================================= */
+
+.rentfits-footer {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+
+  color: #222222;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BOX SIZING
+========================================================= */
+
+.rentfits-footer *,
+.rentfits-footer *::before,
+.rentfits-footer *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FOOTER MAIN
+========================================================= */
+
+.footer-main {
+  width: 100%;
+
+  min-height: 235px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    0.85fr
+    1fr
+    0.95fr
+    1.4fr;
+
+  column-gap: 50px;
+
+  padding:
+    32px
+    55px
+    25px;
+
+  border-top:
+    1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.footer-brand {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+/* =========================================================
+   ORIGINAL RENTFITS LOGO
+========================================================= */
+
+.footer-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  text-decoration: none;
+}
+
+
+/* HANGER */
+
+.footer-hanger {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ed3f70;
+
+  font-size: 27px;
+
+  line-height: 1;
+}
+
+
+/* RENTFITS */
+
+.footer-brand-name {
+  color: #111111;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 17px;
+
+  line-height: 19px;
+
+  font-weight: 700;
+
+  letter-spacing: 0;
+}
+
+
+/* TAGLINE */
+
+.footer-tagline {
+  margin-top: 1px;
+
+  color: #777777;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 8px;
+
+  line-height: 10px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   BRAND DESCRIPTION
+========================================================= */
+
+.footer-description {
+  margin:
+    17px
+    0
+    17px;
+
+  padding: 0;
+
+  color: #555555;
+
+  font-size: 11px;
+
+  line-height: 17px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA
+========================================================= */
+
+.footer-socials {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+
+.social-link {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.social-link img {
+  display: block;
+
+  width: 18px;
+  height: 18px;
+
+  max-width: 18px;
+  max-height: 18px;
+
+  object-fit: contain;
+
+  object-position: center;
+}
+
+
+.social-link:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.75;
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+.footer-column h3,
+.footer-newsletter h3 {
+  margin:
+    1px
+    0
+    15px;
+
+  padding: 0;
+
+  color: #222222;
+
+  font-size: 12px;
+
+  line-height: 15px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.footer-column a {
+  display: block;
+
+  width: fit-content;
+
+  margin:
+    0
+    0
+    9px;
+
+  padding: 0;
+
+  color: #555555;
+
+  font-size: 10px;
+
+  line-height: 14px;
+
+  font-weight: 400;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.footer-column a:hover {
+  color: #ed3f70;
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.footer-newsletter {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+.footer-newsletter p {
+  margin:
+    0
+    0
+    15px;
+
+  padding: 0;
+
+  color: #555555;
+
+  font-size: 10px;
+
+  line-height: 15px;
+}
+
+
+/* =========================================================
+   NEWSLETTER FORM
+========================================================= */
+
+.newsletter-form {
+  width: 100%;
+
+  max-width: 250px;
+
+  height: 36px;
+
+  display: flex;
+
+  align-items: stretch;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border:
+    1px solid #dddddd;
+
+  border-radius: 5px;
+}
+
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+.newsletter-form input {
+  flex: 1;
+
+  min-width: 0;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+
+  padding:
+    0
+    11px;
+
+  border: none;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #222222;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 10px;
+}
+
+
+.newsletter-form input::placeholder {
+  color: #999999;
+}
+
+
+/* =========================================================
+   SUBSCRIBE
+========================================================= */
+
+.newsletter-form button {
+  width: 72px;
+
+  height: 100%;
+
+  flex:
+    0
+    0
+    72px;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  background: #ed3f70;
+
+  color: #ffffff;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.newsletter-form button:hover {
+  background: #d93261;
+}
+
+
+.newsletter-form button:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+  width: 100%;
+
+  min-height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding:
+    0
+    55px;
+
+  border-top:
+    1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.copyright {
+  margin: 0;
+
+  padding: 0;
+
+  color: #777777;
+
+  font-size: 9px;
+
+  line-height: 12px;
+}
+
+
+/* =========================================================
+   PAYMENT LOGOS
+========================================================= */
+
+.payment-logos {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 17px;
+}
+
+
+/* =========================================================
+   PAYMENT IMAGE
+========================================================= */
+
+.payment-logo {
+  display: block;
+
+  width: auto;
+  height: 18px;
+
+  max-width: 55px;
+  max-height: 18px;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  flex-shrink: 0;
+
+  transition:
+    opacity 0.2s ease;
+}
+
+
+.payment-logo:hover {
+  opacity: 0.75;
+}
+
+
+/* =========================================================
+   PAYMENT SIZES
+========================================================= */
+
+.visa-logo {
+  width: 38px;
+  height: 16px;
+}
+
+
+.mastercard-logo {
+  width: 32px;
+  height: 19px;
+}
+
+
+.rupay-logo {
+  width: 45px;
+  height: 18px;
+}
+
+
+.upi-logo {
+  width: 30px;
+  height: 18px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .footer-main {
+    padding:
+      35px
+      75px
+      28px;
+
+    column-gap: 65px;
+  }
+
+
+  .footer-bottom {
+    padding:
+      0
+      75px;
+  }
+
+
+  .footer-brand-name {
+    font-size: 18px;
+  }
+
+
+  .footer-description {
+    font-size: 12px;
+
+    line-height: 18px;
+  }
+
+
+  .footer-column a {
+    font-size: 11px;
+
+    line-height: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .footer-main {
+    grid-template-columns:
+      1.3fr
+      1fr
+      1fr;
+
+    column-gap: 35px;
+
+    row-gap: 30px;
+
+    padding:
+      30px;
+  }
+
+
+  .footer-newsletter {
+    grid-column: span 2;
+  }
+
+
+  .footer-bottom {
+    padding:
+      0
+      30px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .footer-main {
+    grid-template-columns:
+      1fr
+      1fr;
+
+    column-gap: 25px;
+
+    row-gap: 28px;
+
+    padding:
+      30px
+      24px;
+  }
+
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+
+
+  .footer-newsletter {
+    grid-column: span 2;
+  }
+
+
+  .footer-bottom {
+    min-height: 75px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding:
+      15px
+      24px;
+  }
+
+
+  .payment-logos {
+    justify-content: flex-start;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .footer-main {
+    grid-template-columns: 1fr;
+
+    row-gap: 25px;
+  }
+
+
+  .footer-brand,
+  .footer-newsletter {
+    grid-column: auto;
+  }
+
+
+  .footer-bottom {
+    align-items: flex-start;
+  }
+
+}
+/* =========================================================
+   RENTFITS APP DOWNLOAD BANNER
+========================================================= */
+
+.app-banner {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #fde7ed;
+
+  line-height: 0;
+}
+
+
+/* =========================================================
+   COMPLETE BANNER IMAGE
+========================================================= */
+
+.app-banner-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .app-banner-image {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .app-banner-image {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .app-banner {
+    overflow-x: auto;
+  }
+
+  .app-banner-image {
+    /*
+     * Keep the original banner proportions.
+     * Prevent the banner from being distorted.
+     */
+    width: 100%;
+    min-width: 700px;
+    height: auto;
+  }
+
+}
+@media (max-width: 768px) {
+
+  /* =========================================
+     TOP CATEGORIES - MOBILE
+  ========================================= */
+
+  .categories-section {
+    width: 100%;
+    padding: 24px 15px 30px;
+    box-sizing: border-box;
+  }
+
+  .categories-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .categories-header h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .categories-header .view-all-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+
+  /* =========================================
+     2 COLUMN MOBILE GRID
+  ========================================= */
+
+  .categories-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 18px;
+    width: 100%;
+  }
+
+  /* =========================================
+     CATEGORY CARD
+  ========================================= */
+
+  .category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+  }
+
+ /* =========================================================
+   MOBILE TOP CATEGORIES - CIRCLE IMAGE
+   Keep top of image visible, crop bottom
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .category-image {
+    width: 125px;
+    height: 125px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    background: #f8cfd6;
+
+    box-sizing: border-box;
+  }
+
+  .category-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    /*
+      Fill the entire circle.
+      Extra image is cropped.
+    */
+    object-fit: cover;
+
+    /*
+      Keep the TOP of the image.
+      Cropping happens mainly at the BOTTOM.
+    */
+    object-position: center top;
+
+    border-radius: 50%;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .category-image {
+    width: 110px;
+    height: 110px;
+  }
+
+  .category-image img {
+    object-fit: cover;
+    object-position: center top;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+  .categories-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .categories-list {
+    gap: 20px 10px;
+  }
+
+  .category-image {
+    width: 105px;
+    height: 105px;
+  }
+
+  .category-card p {
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+}

@@ -1,0 +1,617 @@
+<header class="site-header">
+
+  <!-- =====================================================
+       TOP HEADER
+  ====================================================== -->
+
+  <div class="header-main">
+
+    <!-- LOGO -->
+    <button
+      class="brand"
+      type="button"
+      (click)="goHome()"
+    >
+
+      <div class="hanger-logo">
+
+        <svg
+          viewBox="0 0 70 60"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-label="RentFits logo"
+        >
+
+          <!-- HANGER HOOK -->
+          <path
+            d="M35 5
+               C35 2 39 1 41 4
+               C43 7 40 10 37 12"
+            fill="none"
+            stroke="#ed3f70"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          />
+
+          <!-- HANGER -->
+          <path
+            d="M37 12
+               L64 34
+               C66 36 65 40 61 40
+               H9
+               C5 40 4 36 7 34
+               L35 12"
+            fill="none"
+            stroke="#ed3f70"
+            stroke-width="2.2"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          />
+
+          <!-- CENTER LINE -->
+          <path
+            d="M35 12 V51"
+            fill="none"
+            stroke="#ed3f70"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+
+        </svg>
+
+      </div>
+
+      <div class="brand-text">
+
+        <div class="brand-name">
+          RentFits
+        </div>
+
+        <div class="brand-tagline">
+          Wear More. Spend Less.
+        </div>
+
+      </div>
+
+    </button>
+
+
+    <!-- =====================================================
+         MOBILE MENU BUTTON
+    ====================================================== -->
+
+    <button
+      class="mobile-menu-button"
+      type="button"
+      (click)="toggleMobileMenu()"
+      aria-label="Open menu"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <!-- =====================================================
+         SEARCH
+    ====================================================== -->
+
+    <div class="search-container">
+
+      <input
+        type="text"
+        placeholder="Search outfits, brands, jewellery..."
+        [(ngModel)]="searchText"
+        (keyup.enter)="search()"
+      />
+
+      <button
+        class="search-button"
+        type="button"
+        (click)="search()"
+        aria-label="Search"
+      >
+
+        <span class="search-icon"></span>
+
+      </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         DESKTOP HEADER ACTIONS
+    ====================================================== -->
+
+    <div class="header-actions">
+
+      <!-- BECOME A SELLER -->
+      <button
+        class="header-action"
+        type="button"
+        (click)="handleAction('Become a Seller')"
+      >
+
+        <div class="action-icon user-icon"></div>
+
+        <span>
+          Become a Seller
+        </span>
+
+      </button>
+
+
+      <!-- MESSAGE -->
+      <button
+        class="header-action"
+        type="button"
+        (click)="goToMessages()"
+      >
+
+        <div class="action-icon message-icon"></div>
+
+        <span>
+          Message
+        </span>
+
+      </button>
+
+
+      <!-- WISHLIST -->
+      <button
+        class="header-action"
+        type="button"
+        (click)="handleAction('Wishlist')"
+      >
+
+        <div class="action-icon heart-icon">
+          ♡
+        </div>
+
+        <span>
+          Wishlist
+        </span>
+
+      </button>
+
+
+      <!-- =================================================
+           DESKTOP LOCATION
+      ================================================== -->
+
+      <div class="location-dropdown">
+
+        <button
+          class="header-action location-action"
+          type="button"
+          (click)="toggleLocationDropdown()"
+        >
+
+          <div class="action-icon location-icon">
+
+            <span class="location-pin"></span>
+
+          </div>
+
+          <span>
+            {{ selectedLocation }}
+          </span>
+
+        </button>
+
+
+        @if (locationDropdownOpen) {
+
+          <div class="location-menu">
+
+            <div class="location-menu-title">
+              Select Location
+            </div>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Mumbai')"
+            >
+              Mumbai
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Delhi')"
+            >
+              Delhi
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Bengaluru')"
+            >
+              Bengaluru
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Hyderabad')"
+            >
+              Hyderabad
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Chennai')"
+            >
+              Chennai
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Kolkata')"
+            >
+              Kolkata
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Pune')"
+            >
+              Pune
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Jaipur')"
+            >
+              Jaipur
+            </button>
+
+          </div>
+
+        }
+
+      </div>
+
+
+      <!-- CART -->
+      <button
+        class="header-action cart-action"
+        type="button"
+        (click)="handleAction('Cart')"
+      >
+
+        <div class="action-icon cart-icon"></div>
+
+        <span class="cart-badge">
+          2
+        </span>
+
+        <span>
+          Cart
+        </span>
+
+      </button>
+
+
+      <!-- SIGN IN -->
+      <button
+        class="header-action"
+        type="button"
+        (click)="handleAction('Sign in / Register')"
+      >
+
+        <div class="action-icon signin-icon"></div>
+
+        <span>
+          Sign in / Register
+        </span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       DESKTOP NAVIGATION
+  ====================================================== -->
+
+  <nav class="main-navigation">
+
+    <button
+      type="button"
+      (click)="navigate('Women')"
+    >
+      Women
+    </button>
+
+
+    <button
+      type="button"
+      (click)="navigate('Men')"
+    >
+      Men
+    </button>
+
+
+    <button
+      type="button"
+      (click)="navigate('Kids')"
+    >
+      Kids
+    </button>
+
+
+    <button
+      type="button"
+      (click)="navigate('Jewellery')"
+    >
+      Jewellery
+    </button>
+
+
+    <button
+      type="button"
+      (click)="navigate('Occasions')"
+    >
+      Occasions
+    </button>
+
+
+    <button
+      type="button"
+      (click)="navigate('Brands')"
+    >
+      Brands
+    </button>
+
+
+    <button
+      type="button"
+      (click)="navigate('New Arrivals')"
+    >
+      New Arrivals
+    </button>
+
+
+    <button
+      type="button"
+      (click)="navigate('How It Works')"
+    >
+      How It Works
+    </button>
+
+  </nav>
+
+
+  <!-- =====================================================
+       MOBILE MENU
+  ====================================================== -->
+
+  @if (mobileMenuOpen) {
+
+    <div class="mobile-menu">
+
+
+      <!-- WOMEN -->
+      <button
+        type="button"
+        (click)="navigate('Women')"
+      >
+        Women
+      </button>
+
+
+      <!-- MEN -->
+      <button
+        type="button"
+        (click)="navigate('Men')"
+      >
+        Men
+      </button>
+
+
+      <!-- KIDS -->
+      <button
+        type="button"
+        (click)="navigate('Kids')"
+      >
+        Kids
+      </button>
+
+
+      <!-- JEWELLERY -->
+      <button
+        type="button"
+        (click)="navigate('Jewellery')"
+      >
+        Jewellery
+      </button>
+
+
+      <!-- OCCASIONS -->
+      <button
+        type="button"
+        (click)="navigate('Occasions')"
+      >
+        Occasions
+      </button>
+
+
+      <!-- BRANDS -->
+      <button
+        type="button"
+        (click)="navigate('Brands')"
+      >
+        Brands
+      </button>
+
+
+      <!-- NEW ARRIVALS -->
+      <button
+        type="button"
+        (click)="navigate('New Arrivals')"
+      >
+        New Arrivals
+      </button>
+
+
+      <!-- HOW IT WORKS -->
+      <button
+        type="button"
+        (click)="navigate('How It Works')"
+      >
+        How It Works
+      </button>
+
+
+      <!-- =================================================
+           MOBILE LOCATION
+      ================================================== -->
+
+      <div class="mobile-location-section">
+
+        <button
+          type="button"
+          class="mobile-location-button"
+          (click)="toggleLocationDropdown()"
+        >
+
+          <span class="mobile-location-icon">
+            📍
+          </span>
+
+          <span>
+            {{ selectedLocation }}
+          </span>
+
+          <span class="mobile-location-arrow">
+            {{ locationDropdownOpen ? '▲' : '▼' }}
+          </span>
+
+        </button>
+
+
+        @if (locationDropdownOpen) {
+
+          <div class="mobile-location-menu">
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Mumbai')"
+            >
+              Mumbai
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Delhi')"
+            >
+              Delhi
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Bengaluru')"
+            >
+              Bengaluru
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Hyderabad')"
+            >
+              Hyderabad
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Chennai')"
+            >
+              Chennai
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Kolkata')"
+            >
+              Kolkata
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Pune')"
+            >
+              Pune
+            </button>
+
+
+            <button
+              type="button"
+              (click)="selectLocation('Jaipur')"
+            >
+              Jaipur
+            </button>
+
+          </div>
+
+        }
+
+      </div>
+
+
+      <!-- =================================================
+           MOBILE MESSAGE
+      ================================================== -->
+
+      <button
+        type="button"
+        (click)="goToMessages()"
+      >
+        Message
+      </button>
+
+
+      <!-- =================================================
+           MOBILE CART
+      ================================================== -->
+
+      <button
+        type="button"
+        (click)="handleAction('Cart')"
+      >
+        Cart
+      </button>
+
+
+      <!-- =================================================
+           MOBILE SIGN IN
+      ================================================== -->
+
+      <button
+        type="button"
+        (click)="handleAction('Sign in / Register')"
+      >
+        Sign in / Register
+      </button>
+
+    </div>
+
+  }
+
+</header>

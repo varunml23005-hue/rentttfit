@@ -1,0 +1,157 @@
+npm notice run rentfit@0.0.0 npx
+npm notice run ng serve --host 127.0.0.1 --port 4200
+Component HMR has been enabled, see https://angular.dev/hmr for more info.
+> Building...
+√ Building...
+Initial chunk files | Names                    |  Raw size
+polyfills.js        | polyfills                |  89.77 kB | 
+main.js             | main                     |   3.32 kB | 
+styles.css          | styles                   | 406 bytes | 
+
+                    | Initial total            |  93.50 kB
+
+Lazy chunk files    | Names                    |  Raw size
+chunk-TEU3CVLH.js   | home-component           | 125.77 kB | 
+chunk-EPOEDU5W.js   | catalogue-component      |  43.36 kB | 
+chunk-IPEP75OM.js   | -                        |  42.16 kB | 
+chunk-ZU73V37J.js   | product-detail-component |  36.96 kB | 
+chunk-OZSKGOLN.js   | -                        |   7.61 kB | 
+
+Application bundle generation complete. [11.264 seconds]
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://127.0.0.1:4200/
+  ➜  press h + enter to show help
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Initial chunk files | Names               | Raw size
+main.js             | main                |  3.32 kB | 
+
+Lazy chunk files    | Names               | Raw size
+chunk-LSNAVQN2.js   | catalogue-component | 44.00 kB | 
+
+Application bundle generation complete. [3.996 seconds]
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Initial chunk files | Names                    | Raw size
+main.js             | main                     |  3.32 kB | 
+
+Lazy chunk files    | Names                    | Raw size
+chunk-NBH6CCUI.js   | product-detail-component | 37.27 kB | 
+
+Application bundle generation complete. [1.693 seconds]
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Initial chunk files | Names                    | Raw size
+main.js             | main                     |  3.32 kB | 
+
+Lazy chunk files    | Names                    | Raw size
+chunk-RUGCHAAO.js   | product-detail-component | 37.92 kB | 
+
+Application bundle generation complete. [1.546 seconds]
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Initial chunk files | Names               | Raw size
+main.js             | main                |  3.32 kB | 
+
+Lazy chunk files    | Names               | Raw size
+chunk-WK4WITER.js   | catalogue-component | 43.38 kB | 
+
+Application bundle generation complete. [1.823 seconds]
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Initial chunk files | Names          |  Raw size
+main.js             | main           |   3.32 kB | 
+
+Lazy chunk files    | Names          |  Raw size
+chunk-GGMB4VLI.js   | home-component | 127.39 kB | 
+
+Application bundle generation complete. [2.994 seconds]
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Initial chunk files | Names          |  Raw size
+main.js             | main           |   3.32 kB | 
+
+Lazy chunk files    | Names          |  Raw size
+chunk-QM4VXMFB.js   | home-component | 128.03 kB | 
+
+Application bundle generation complete. [1.889 seconds]
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Initial chunk files | Names               | Raw size
+main.js             | main                |  3.32 kB | 
+
+Lazy chunk files    | Names               | Raw size
+chunk-LSNAVQN2.js   | catalogue-component | 44.00 kB | 
+
+Application bundle generation complete. [1.834 seconds]
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Initial chunk files | Names          |  Raw size
+main.js             | main           |   3.32 kB | 
+
+Lazy chunk files    | Names          |  Raw size
+chunk-WDJWR4BM.js   | home-component | 126.42 kB | 
+
+Application bundle generation complete. [1.703 seconds]
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Initial chunk files | Names          |  Raw size
+main.js             | main           |   3.32 kB | 
+
+Lazy chunk files    | Names          |  Raw size
+chunk-TEU3CVLH.js   | home-component | 125.77 kB | 
+
+Application bundle generation complete. [1.502 seconds]
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Initial chunk files | Names               | Raw size
+main.js             | main                |  3.32 kB | 
+
+Lazy chunk files    | Names               | Raw size
+chunk-WK4WITER.js   | catalogue-component | 43.38 kB | 
+
+Application bundle generation complete. [1.577 seconds]
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Initial chunk files | Names               | Raw size
+main.js             | main                |  3.32 kB | 
+
+Lazy chunk files    | Names               | Raw size
+chunk-6YV7VUZ2.js   | catalogue-component | 43.27 kB | 
+
+Application bundle generation complete. [1.990 seconds]
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Initial chunk files | Names               | Raw size
+main.js             | main                |  3.32 kB | 
+
+Lazy chunk files    | Names               | Raw size
+chunk-FTPUDX5A.js   | catalogue-component | 43.23 kB | 
+
+Application bundle generation complete. [1.206 seconds]
+
+Component update sent to client(s).

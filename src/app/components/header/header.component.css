@@ -1,0 +1,1772 @@
+/* =========================================================
+   RENTFITS DESKTOP HEADER
+========================================================= */
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.site-header {
+  width: 100%;
+  min-width: 0;
+
+  background: #ffffff;
+  color: #111111;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   TOP HEADER
+========================================================= */
+
+.header-main {
+  width: 100%;
+  height: 88px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 3.2%;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   RENTFITS LOGO
+   NO HOVER EFFECT
+========================================================= */
+
+.brand {
+  width: 245px;
+  height: 70px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: default;
+
+  text-align: left;
+
+  color: #111111;
+
+  transform: none;
+}
+
+
+/*
+   Prevent ANY hover effect on the logo area.
+*/
+
+.brand:hover,
+.brand:focus,
+.brand:active {
+  color: #111111;
+
+  background: transparent;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   HANGER LOGO
+========================================================= */
+
+.hanger-logo {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  margin-right: 7px;
+}
+
+
+.hanger-logo svg {
+  width: 58px;
+  height: 58px;
+
+  display: block;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   RENTFITS TEXT
+========================================================= */
+
+.brand-text {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+/*
+   RENTFITS TITLE
+   Completely static.
+*/
+
+.brand-name {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 28px;
+  line-height: 30px;
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+
+  transition: none;
+}
+
+
+/*
+   IMPORTANT:
+   RENTFITS DOES NOT CHANGE ON HOVER.
+*/
+
+.brand-name:hover {
+  color: #111111;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   TAGLINE
+========================================================= */
+
+.brand-tagline {
+  margin-top: 2px;
+
+  color: #777777;
+
+  font-size: 10px;
+  line-height: 13px;
+
+  transition: none;
+}
+
+
+.brand-tagline:hover {
+  color: #777777;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-container {
+  display: flex;
+  align-items: center;
+
+  height: 50px;
+
+  flex: 1;
+
+  max-width: 715px;
+
+  margin-left: 30px;
+
+  overflow: hidden;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.search-container:focus-within {
+  border-color: #ed3f70;
+
+  box-shadow:
+    0 0 0 2px rgba(237, 63, 112, 0.08);
+}
+
+
+.search-container input {
+  flex: 1;
+
+  width: 100%;
+  min-width: 0;
+
+  height: 100%;
+
+  padding: 0 20px;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #333333;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 14px;
+}
+
+
+.search-container input::placeholder {
+  color: #999999;
+}
+
+
+/* =========================================================
+   SEARCH BUTTON
+========================================================= */
+
+.search-button {
+  width: 56px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background: #ed3f70;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+
+.search-button:hover {
+  background: #d93261;
+}
+
+
+.search-button:active {
+  transform: scale(0.98);
+}
+
+
+/* Search icon */
+
+.search-icon {
+  position: relative;
+
+  display: block;
+
+  width: 14px;
+  height: 14px;
+
+  border: 2px solid #ffffff;
+
+  border-radius: 50%;
+}
+
+
+.search-icon::after {
+  content: "";
+
+  position: absolute;
+
+  width: 7px;
+  height: 2px;
+
+  right: -5px;
+  bottom: -3px;
+
+  background: #ffffff;
+
+  border-radius: 2px;
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.header-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  flex: 1;
+
+  min-width: 570px;
+
+  margin-left: 32px;
+}
+
+
+/* =========================================================
+   HEADER ACTION BUTTON
+========================================================= */
+
+.header-action {
+  position: relative;
+
+  min-width: 67px;
+  height: 64px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #111111;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.header-action:hover {
+  color: #ed3f70;
+
+  transform: translateY(-2px);
+}
+
+
+.header-action:active {
+  transform: translateY(0);
+}
+
+
+.header-action > span:last-child {
+  margin-top: 6px;
+
+  color: inherit;
+
+  font-size: 10px;
+
+  line-height: 12px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   COMMON ICON
+========================================================= */
+
+.action-icon {
+  position: relative;
+
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   USER ICON
+========================================================= */
+
+.user-icon::before {
+  content: "";
+
+  position: absolute;
+
+  top: 1px;
+  left: 7px;
+
+  width: 7px;
+  height: 7px;
+
+  border: 1.7px solid #111111;
+
+  border-radius: 50%;
+
+  transition: border-color 0.2s ease;
+}
+
+
+.user-icon::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 1px;
+  left: 3px;
+
+  width: 15px;
+  height: 8px;
+
+  border: 1.7px solid #111111;
+
+  border-bottom: none;
+
+  border-radius: 10px 10px 0 0;
+
+  transition: border-color 0.2s ease;
+}
+
+
+.header-action:hover .user-icon::before,
+.header-action:hover .user-icon::after {
+  border-color: #ed3f70;
+}
+
+
+/* =========================================================
+   MESSAGE ICON
+========================================================= */
+
+.message-icon {
+  width: 18px;
+  height: 14px;
+
+  border: 1.7px solid #111111;
+
+  border-radius: 3px;
+
+  transition: border-color 0.2s ease;
+}
+
+
+.message-icon::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -5px;
+  left: 3px;
+
+  width: 6px;
+  height: 6px;
+
+  border-left: 1.7px solid #111111;
+
+  transform: skewY(-35deg);
+
+  transition: border-color 0.2s ease;
+}
+
+
+.header-action:hover .message-icon,
+.header-action:hover .message-icon::after {
+  border-color: #ed3f70;
+}
+
+
+/* =========================================================
+   HEART / WISHLIST
+========================================================= */
+
+.heart-icon {
+  color: #111111;
+
+  font-size: 29px;
+
+  line-height: 20px;
+
+  font-weight: 300;
+
+  transition: color 0.2s ease;
+}
+
+
+.header-action:hover .heart-icon {
+  color: #ed3f70;
+}
+
+
+/* =========================================================
+   ORDERS ICON
+========================================================= */
+
+.orders-icon {
+  width: 15px;
+  height: 17px;
+
+  border: 1.7px solid #111111;
+
+  border-radius: 2px;
+
+  transition: border-color 0.2s ease;
+}
+
+
+.orders-icon::before {
+  content: "";
+
+  position: absolute;
+
+  left: 3px;
+  top: -4px;
+
+  width: 7px;
+  height: 5px;
+
+  border: 1.7px solid #111111;
+
+  border-bottom: none;
+
+  border-radius: 5px 5px 0 0;
+
+  transition: border-color 0.2s ease;
+}
+
+
+.header-action:hover .orders-icon,
+.header-action:hover .orders-icon::before {
+  border-color: #ed3f70;
+}
+
+
+/* =========================================================
+   CART ICON
+========================================================= */
+
+.cart-icon {
+  width: 20px;
+  height: 13px;
+
+  border-bottom: 2px solid #111111;
+
+  transform: skew(-10deg);
+
+  transition: border-color 0.2s ease;
+}
+
+
+.cart-icon::before {
+  content: "";
+
+  position: absolute;
+
+  top: -4px;
+  left: -3px;
+
+  width: 20px;
+  height: 9px;
+
+  border-top: 2px solid #111111;
+  border-right: 2px solid #111111;
+
+  transition: border-color 0.2s ease;
+}
+
+
+.cart-icon::after {
+  content: "•  •";
+
+  position: absolute;
+
+  left: 2px;
+  top: 8px;
+
+  color: #111111;
+
+  font-size: 13px;
+
+  letter-spacing: 3px;
+
+  transform: skew(10deg);
+
+  transition: color 0.2s ease;
+}
+
+
+.header-action:hover .cart-icon,
+.header-action:hover .cart-icon::before {
+  border-color: #ed3f70;
+}
+
+
+.header-action:hover .cart-icon::after {
+  color: #ed3f70;
+}
+
+
+/* =========================================================
+   CART BADGE
+========================================================= */
+
+.cart-badge {
+  position: absolute;
+
+  top: 0;
+  right: 14px;
+
+  width: 17px;
+  height: 17px;
+
+  display: flex !important;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 !important;
+
+  border-radius: 50%;
+
+  background: #ed3f70;
+
+  color: #ffffff !important;
+
+  font-size: 9px !important;
+
+  font-weight: 700;
+
+  line-height: 17px !important;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   SIGN IN ICON
+========================================================= */
+
+.signin-icon::before {
+  content: "";
+
+  position: absolute;
+
+  top: 1px;
+  left: 7px;
+
+  width: 7px;
+  height: 7px;
+
+  border: 1.7px solid #ed3f70;
+
+  border-radius: 50%;
+}
+
+
+.signin-icon::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 1px;
+  left: 3px;
+
+  width: 15px;
+  height: 8px;
+
+  border: 1.7px solid #ed3f70;
+
+  border-bottom: none;
+
+  border-radius: 10px 10px 0 0;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.main-navigation {
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 48px;
+
+  padding: 0 3.8%;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #eeeeee;
+
+  background: #ffffff;
+}
+
+
+.main-navigation button {
+  position: relative;
+
+  height: 50px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #111111;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+
+.main-navigation button::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background: #ed3f70;
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition: transform 0.2s ease;
+}
+
+
+.main-navigation button:hover {
+  color: #ed3f70;
+}
+
+
+.main-navigation button:hover::after {
+  transform: scaleX(1);
+}
+
+
+.main-navigation button:active {
+  transform: scale(0.98);
+}
+/* =========================================================
+   LOCATION DROPDOWN
+========================================================= */
+
+.location-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.location-action {
+  position: relative;
+}
+
+
+/* DROPDOWN MENU */
+
+.location-menu {
+  position: absolute;
+
+  top: calc(100% + 10px);
+  right: -35px;
+
+  width: 190px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(0, 0, 0, 0.12);
+
+  padding: 8px 0;
+
+  z-index: 1000;
+}
+
+
+/* DROPDOWN TITLE */
+
+.location-menu-title {
+  padding: 10px 16px;
+
+  color: #222222;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  border-bottom: 1px solid #f1f1f1;
+
+  margin-bottom: 4px;
+}
+
+
+/* LOCATION OPTIONS */
+
+.location-menu button {
+  display: block;
+
+  width: 100%;
+
+  padding: 9px 16px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #333333;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+/* HOVER */
+
+.location-menu button:hover {
+  background: #fff0f4;
+
+  color: #ed3f70;
+}
+/* =========================================================
+   LOCATION ICON
+========================================================= */
+
+.location-icon {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+
+/* PIN */
+
+.location-pin {
+  width: 13px;
+  height: 13px;
+
+  border: 2px solid #ed3f70;
+
+  border-radius: 50% 50% 50% 0;
+
+  transform: rotate(-45deg);
+
+  position: relative;
+
+  display: block;
+}
+
+
+/* CENTER DOT */
+
+.location-pin::after {
+  content: "";
+
+  position: absolute;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ed3f70;
+
+  border-radius: 50%;
+
+  top: 3px;
+  left: 3px;
+
+  .mobile-menu {
+  display: none;
+}
+}
+/* =========================================================
+   RENTFITS MOBILE HEADER
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  /* ---------------------------------------------------------
+     TOP HEADER
+  --------------------------------------------------------- */
+
+  .header-main {
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    padding: 14px 16px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #eeeeee;
+  }
+
+
+  /* ---------------------------------------------------------
+     LOGO
+  --------------------------------------------------------- */
+
+  .brand {
+    width: auto;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0;
+
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .hanger-logo {
+    width: 48px;
+    height: 48px;
+
+    margin-right: 5px;
+  }
+
+  .hanger-logo svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-name {
+    font-size: 24px;
+    line-height: 27px;
+  }
+
+  .brand-tagline {
+    font-size: 9px;
+    line-height: 12px;
+  }
+
+
+  /* ---------------------------------------------------------
+     MOBILE MENU BUTTON AREA
+  --------------------------------------------------------- */
+
+  .header-actions {
+    grid-column: 2;
+    grid-row: 1;
+
+    min-width: 0;
+
+    width: auto;
+
+    margin-left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 0;
+  }
+
+
+  /* Hide desktop action items */
+
+  .header-actions .header-action {
+    display: none;
+  }
+
+
+  /* ---------------------------------------------------------
+     SEARCH
+  --------------------------------------------------------- */
+
+  .search-container {
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    width: 100%;
+
+    max-width: none;
+
+    height: 48px;
+
+    margin: 12px 0 0;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
+  }
+
+  .search-container input {
+    font-size: 14px;
+
+    padding: 0 16px;
+
+    min-width: 0;
+  }
+
+  .search-button {
+    width: 52px;
+    height: 48px;
+  }
+
+
+  /* ---------------------------------------------------------
+     MOBILE MENU BUTTON
+  --------------------------------------------------------- */
+
+  .mobile-menu-button {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+  }
+
+  .mobile-menu-button span {
+    display: block;
+
+    width: 22px;
+    height: 2px;
+
+    background: #111111;
+
+    border-radius: 2px;
+  }
+
+
+  /* ---------------------------------------------------------
+     NAVIGATION
+  --------------------------------------------------------- */
+
+  .main-navigation {
+    width: 100%;
+
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 0 18px;
+
+    box-sizing: border-box;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    white-space: nowrap;
+
+    scrollbar-width: none;
+  }
+
+  .main-navigation::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main-navigation button {
+    flex-shrink: 0;
+
+    height: 56px;
+
+    font-size: 14px;
+  }
+
+
+  /* ---------------------------------------------------------
+     LOCATION DROPDOWN
+  --------------------------------------------------------- */
+
+  .location-menu {
+    position: fixed;
+
+    top: 120px;
+    right: 16px;
+
+    width: 190px;
+
+    max-width: calc(100vw - 32px);
+
+    z-index: 9999;
+  }
+
+}
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-button {
+  display: none;
+}
+/* =========================================================
+   MOBILE HEADER
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .header-main {
+    width: 100%;
+    height: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    padding: 14px 16px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* LOGO */
+
+  .brand {
+    width: auto;
+    height: 58px;
+
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+
+  .hanger-logo {
+    width: 48px;
+    height: 48px;
+
+    margin-right: 5px;
+  }
+
+
+  .hanger-logo svg {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .brand-name {
+    font-size: 24px;
+    line-height: 27px;
+  }
+
+
+  .brand-tagline {
+    font-size: 9px;
+    line-height: 12px;
+  }
+
+
+  /* SEARCH */
+
+  .search-container {
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    width: 100%;
+    max-width: none;
+
+    height: 48px;
+
+    margin: 12px 0 0;
+
+    box-sizing: border-box;
+  }
+
+
+  .search-container input {
+    font-size: 14px;
+
+    padding: 0 16px;
+  }
+
+
+  .search-button {
+    width: 52px;
+    height: 48px;
+  }
+
+
+  /* HAMBURGER */
+
+  .mobile-menu-button {
+    grid-column: 2;
+    grid-row: 1;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+  }
+
+
+  .mobile-menu-button span {
+    display: block;
+
+    width: 22px;
+    height: 2px;
+
+    background: #111111;
+
+    border-radius: 2px;
+  }
+
+
+  /* HIDE DESKTOP ACTIONS */
+
+  .header-actions {
+    display: none;
+  }
+
+
+  /* NAVIGATION */
+
+  .main-navigation {
+    width: 100%;
+
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 0 18px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    white-space: nowrap;
+
+    scrollbar-width: none;
+  }
+
+
+  .main-navigation::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .main-navigation button {
+    flex-shrink: 0;
+
+    height: 56px;
+
+    font-size: 14px;
+  }
+
+}
+  /* =========================================================
+     MOBILE MENU
+  ========================================================= */
+
+  .mobile-menu {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    box-shadow:
+      0 6px 15px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+
+    z-index: 999;
+  }
+
+
+  .mobile-menu button {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-bottom: 1px solid #f1f1f1;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+  }
+
+
+  .mobile-menu button:hover {
+    background: #fff0f4;
+
+    color: #ed3f70;
+  }
+
+ /* =========================================================
+   MOBILE MENU
+   HIDDEN ON DESKTOP
+========================================================= */
+
+.mobile-menu {
+  display: none;
+}
+/* =========================================================
+   MOBILE RESPONSIVE HEADER
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* -------------------------------------------------------
+     SITE HEADER
+  ------------------------------------------------------- */
+
+  .site-header {
+    min-width: 0;
+    width: 100%;
+  }
+
+
+  /* -------------------------------------------------------
+     TOP HEADER
+  ------------------------------------------------------- */
+
+  .header-main {
+    height: auto;
+    min-height: 80px;
+
+    padding: 12px 16px;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    grid-template-areas:
+      "brand menu"
+      "search search";
+
+    gap: 12px;
+  }
+
+
+  /* -------------------------------------------------------
+     LOGO
+  ------------------------------------------------------- */
+
+  .brand {
+    grid-area: brand;
+
+    width: auto;
+    height: 55px;
+
+    justify-self: start;
+  }
+
+
+  .hanger-logo {
+    width: 48px;
+    height: 48px;
+
+    margin-right: 6px;
+  }
+
+
+  .hanger-logo svg {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .brand-name {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+
+  .brand-tagline {
+    font-size: 9px;
+    line-height: 11px;
+  }
+
+
+  /* -------------------------------------------------------
+     HAMBURGER BUTTON
+  ------------------------------------------------------- */
+
+  .mobile-menu-button {
+    grid-area: menu;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+  }
+
+
+  .mobile-menu-button span {
+    display: block;
+
+    width: 23px;
+    height: 2px;
+
+    background: #111111;
+
+    border-radius: 2px;
+  }
+
+
+  /* -------------------------------------------------------
+     SEARCH
+  ------------------------------------------------------- */
+
+  .search-container {
+    grid-area: search;
+
+    width: 100%;
+    max-width: none;
+
+    height: 48px;
+
+    margin-left: 0;
+
+    border-radius: 10px;
+  }
+
+
+  .search-container input {
+    font-size: 14px;
+
+    padding: 0 16px;
+  }
+
+
+  .search-button {
+    width: 52px;
+    height: 48px;
+  }
+
+
+  /* -------------------------------------------------------
+     DESKTOP ACTIONS HIDDEN ON MOBILE
+  ------------------------------------------------------- */
+
+  .header-actions {
+    display: none;
+  }
+
+
+  /* -------------------------------------------------------
+     DESKTOP NAVIGATION HIDDEN ON MOBILE
+  ------------------------------------------------------- */
+
+  .main-navigation {
+    display: none;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE MENU
+  ------------------------------------------------------- */
+
+  .mobile-menu {
+    display: block;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+
+    box-shadow:
+      0 8px 20px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+
+    z-index: 1000;
+  }
+
+
+  .mobile-menu > button {
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 52px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-bottom: 1px solid #eeeeee;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+  }
+
+
+  .mobile-menu > button:hover {
+    background: #fff4f7;
+
+    color: #ed3f70;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE LOCATION
+  ------------------------------------------------------- */
+
+  .mobile-location-section {
+    width: 100%;
+
+    border-bottom: 1px solid #eeeeee;
+  }
+
+
+  .mobile-location-button {
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 52px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+  }
+
+
+  .mobile-location-button:hover {
+    background: #fff4f7;
+
+    color: #ed3f70;
+  }
+
+
+  .mobile-location-icon {
+    width: 25px;
+
+    margin-right: 10px;
+
+    color: #ed3f70;
+
+    font-size: 21px;
+  }
+
+
+  .mobile-location-arrow {
+    margin-left: auto;
+
+    font-size: 11px;
+
+    color: #777777;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE LOCATION OPTIONS
+  ------------------------------------------------------- */
+
+  .mobile-location-menu {
+    background: #fafafa;
+
+    border-top: 1px solid #eeeeee;
+  }
+
+
+  .mobile-location-menu button {
+    display: block;
+
+    width: 100%;
+
+    min-height: 45px;
+
+    padding: 0 55px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #333333;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    text-align: left;
+
+    cursor: pointer;
+  }
+
+
+  .mobile-location-menu button:hover {
+    background: #fff0f4;
+
+    color: #ed3f70;
+  }
+
+}

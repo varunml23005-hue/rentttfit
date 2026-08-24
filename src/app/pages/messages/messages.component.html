@@ -1,0 +1,12 @@
+<div class="app-layout">
+
+  <app-sidebar
+    [selectedChat]="selectedChat"
+    (chatSelected)="onChatSelected($event)">
+  </app-sidebar>
+
+  <app-chat-window
+    [chat]="selectedChat">
+  </app-chat-window>
+
+</div>

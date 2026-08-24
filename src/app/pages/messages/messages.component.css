@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 390px 1fr;
+
+  width: 100%;
+  height: 100%;
+
+  background: #ece5dd;
+}
+
+app-sidebar {
+  width: 390px;
+  height: 100%;
+
+  border-right: 1px solid #ddd;
+  background: white;
+
+  overflow: hidden;
+}
+
+app-chat-window {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+
+  .app-layout {
+    grid-template-columns: 350px 1fr;
+  }
+
+  app-sidebar {
+    width: 350px;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+
+  app-sidebar {
+    display: none;
+  }
+
+  app-chat-window {
+    display: flex;
+  }
+
+}
