@@ -3,12 +3,13 @@
 <app-hero></app-hero>
 
 
-<!-- =========================================
+<!-- =========================================================
      TOP CATEGORIES
-========================================= -->
+========================================================= -->
 
 <section class="categories-section">
 
+  <!-- SECTION HEADER -->
   <div class="categories-header">
 
     <h2>Top Categories</h2>
@@ -23,16 +24,20 @@
   </div>
 
 
+  <!-- CATEGORY GRID -->
   <div class="categories-list">
 
 
-    <!-- ================= DRESSES ================= -->
+    <!-- =====================================================
+         1. DRESSES
+    ====================================================== -->
 
     <a
       routerLink="/catalogue"
       [queryParams]="{ category: 'Dresses' }"
       class="category-card"
     >
+
       <div class="category-image">
         <img
           src="/images/dresses.jpg"
@@ -41,16 +46,20 @@
       </div>
 
       <p>Dresses</p>
+
     </a>
 
 
-    <!-- ================= LEHENGA ================= -->
+    <!-- =====================================================
+         2. LEHENGA
+    ====================================================== -->
 
     <a
       routerLink="/catalogue"
       [queryParams]="{ category: 'Lehenga' }"
       class="category-card"
     >
+
       <div class="category-image">
         <img
           src="/images/lehenga.jpg"
@@ -59,16 +68,20 @@
       </div>
 
       <p>Lehenga</p>
+
     </a>
 
 
-    <!-- ================= SAREE ================= -->
+    <!-- =====================================================
+         3. SAREE
+    ====================================================== -->
 
     <a
       routerLink="/catalogue"
       [queryParams]="{ category: 'Saree' }"
       class="category-card"
     >
+
       <div class="category-image">
         <img
           src="/images/saree.jpg"
@@ -77,16 +90,21 @@
       </div>
 
       <p>Saree</p>
+
     </a>
 
 
-    <!-- ================= INDO WESTERN ================= -->
+    <!-- =====================================================
+         4. INDO WESTERN
+         Hidden on mobile through CSS
+    ====================================================== -->
 
     <a
       routerLink="/catalogue"
       [queryParams]="{ category: 'Indo Western' }"
       class="category-card"
     >
+
       <div class="category-image">
         <img
           src="/images/indo-western.jpg"
@@ -95,16 +113,20 @@
       </div>
 
       <p>Indo Western</p>
+
     </a>
 
 
-    <!-- ================= KURTA SET ================= -->
+    <!-- =====================================================
+         5. KURTA SET
+    ====================================================== -->
 
     <a
       routerLink="/catalogue"
       [queryParams]="{ category: 'Kurta Set' }"
       class="category-card"
     >
+
       <div class="category-image">
         <img
           src="/images/kurta-set.jpg"
@@ -113,16 +135,20 @@
       </div>
 
       <p>Kurta Set</p>
+
     </a>
 
 
-    <!-- ================= PARTY WEAR ================= -->
+    <!-- =====================================================
+         6. PARTY WEAR
+    ====================================================== -->
 
     <a
       routerLink="/catalogue"
       [queryParams]="{ category: 'Party Wear' }"
       class="category-card"
     >
+
       <div class="category-image">
         <img
           src="/images/party-wear.jpg"
@@ -131,16 +157,20 @@
       </div>
 
       <p>Party Wear</p>
+
     </a>
 
 
-    <!-- ================= MEN'S WEAR ================= -->
+    <!-- =====================================================
+         7. MEN'S WEAR
+    ====================================================== -->
 
     <a
       routerLink="/catalogue"
       [queryParams]="{ category: &quot;Men's Wear&quot; }"
       class="category-card"
     >
+
       <div class="category-image">
         <img
           src="/images/mens-wear.jpg"
@@ -149,16 +179,21 @@
       </div>
 
       <p>Men's Wear</p>
+
     </a>
 
 
-    <!-- ================= KIDS WEAR ================= -->
+    <!-- =====================================================
+         8. KIDS WEAR
+         Hidden on mobile through CSS
+    ====================================================== -->
 
     <a
       routerLink="/catalogue"
       [queryParams]="{ category: 'Kids Wear' }"
       class="category-card"
     >
+
       <div class="category-image">
         <img
           src="/images/kids-wear.jpg"
@@ -167,16 +202,20 @@
       </div>
 
       <p>Kids Wear</p>
+
     </a>
 
 
-    <!-- ================= JEWELLERY ================= -->
+    <!-- =====================================================
+         9. JEWELLERY
+    ====================================================== -->
 
     <a
       routerLink="/catalogue"
       [queryParams]="{ category: 'Jewellery' }"
       class="category-card"
     >
+
       <div class="category-image">
         <img
           src="/images/jewellery.jpg"
@@ -185,16 +224,20 @@
       </div>
 
       <p>Jewellery</p>
+
     </a>
 
 
-    <!-- ================= ACCESSORIES ================= -->
+    <!-- =====================================================
+         10. ACCESSORIES
+    ====================================================== -->
 
     <a
       routerLink="/catalogue"
       [queryParams]="{ category: 'Accessories' }"
       class="category-card"
     >
+
       <div class="category-image">
         <img
           src="/images/accessories.jpg"
@@ -203,6 +246,7 @@
       </div>
 
       <p>Accessories</p>
+
     </a>
 
   </div>
@@ -673,6 +717,9 @@
   </div>
 
 </section>
+
+
+
 <!-- =========================================================
      HOW RENTFITS WORKS
 ========================================================= -->
@@ -778,6 +825,9 @@
     </div>
 
   </div>
+
+
+  
 
 
   <!-- ================= SECOND ROW ================= -->

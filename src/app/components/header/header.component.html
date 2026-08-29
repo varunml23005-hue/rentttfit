@@ -1,12 +1,31 @@
 <header class="site-header">
 
   <!-- =====================================================
-       TOP HEADER
+       HEADER MAIN
   ====================================================== -->
 
   <div class="header-main">
 
-    <!-- LOGO -->
+    <!-- =================================================
+         MOBILE HAMBURGER
+    ================================================== -->
+
+    <button
+      class="mobile-menu-button"
+      type="button"
+      (click)="toggleMobileMenu()"
+      aria-label="Open menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+
+    <!-- =================================================
+         LOGO
+    ================================================== -->
+
     <button
       class="brand"
       type="button"
@@ -60,6 +79,7 @@
 
       </div>
 
+
       <div class="brand-text">
 
         <div class="brand-name">
@@ -75,27 +95,90 @@
     </button>
 
 
-    <!-- =====================================================
-         MOBILE MENU BUTTON
-    ====================================================== -->
+    <!-- =================================================
+         MOBILE HEADER ACTIONS
+    ================================================== -->
 
-    <button
-      class="mobile-menu-button"
-      type="button"
-      (click)="toggleMobileMenu()"
-      aria-label="Open menu"
-    >
+    <div class="mobile-header-actions">
 
-      <span></span>
-      <span></span>
-      <span></span>
+      <!-- WISHLIST -->
 
-    </button>
+      <button
+        class="mobile-header-icon wishlist-mobile"
+        type="button"
+        (click)="handleAction('Wishlist')"
+        aria-label="Wishlist"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+
+          <path
+            d="M20.8 8.7
+               C20.8 13.5 12 19.2 12 19.2
+               S3.2 13.5 3.2 8.7
+               C3.2 5.8 5.2 4 7.7 4
+               C9.3 4 10.8 4.8 12 6.2
+               C13.2 4.8 14.7 4 16.3 4
+               C18.8 4 20.8 5.8 20.8 8.7Z"
+          />
+
+        </svg>
+
+      </button>
 
 
-    <!-- =====================================================
+      <!-- CART -->
+
+      <button
+        class="mobile-header-icon cart-mobile"
+        type="button"
+        (click)="handleAction('Cart')"
+        aria-label="Shopping cart"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+
+          <path
+            d="M3 4H5L7.2 15.2
+               C7.4 16.2 8.3 17 9.4 17H17.5
+               C18.5 17 19.3 16.4 19.6 15.5L21 9H6"
+          />
+
+          <circle
+            cx="9.5"
+            cy="20"
+            r="1.4"
+          />
+
+          <circle
+            cx="17.5"
+            cy="20"
+            r="1.4"
+          />
+
+        </svg>
+
+
+        <!-- CART BADGE -->
+
+        <span class="mobile-cart-badge">
+          2
+        </span>
+
+      </button>
+
+    </div>
+
+
+    <!-- =================================================
          SEARCH
-    ====================================================== -->
+    ================================================== -->
 
     <div class="search-container">
 
@@ -113,20 +196,36 @@
         aria-label="Search"
       >
 
-        <span class="search-icon"></span>
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+
+          <circle
+            cx="10.8"
+            cy="10.8"
+            r="6.5"
+          />
+
+          <path
+            d="M16 16L21 21"
+          />
+
+        </svg>
 
       </button>
 
     </div>
 
 
-    <!-- =====================================================
+    <!-- =================================================
          DESKTOP HEADER ACTIONS
-    ====================================================== -->
+    ================================================== -->
 
     <div class="header-actions">
 
       <!-- BECOME A SELLER -->
+
       <button
         class="header-action"
         type="button"
@@ -143,6 +242,7 @@
 
 
       <!-- MESSAGE -->
+
       <button
         class="header-action"
         type="button"
@@ -159,6 +259,7 @@
 
 
       <!-- WISHLIST -->
+
       <button
         class="header-action"
         type="button"
@@ -176,9 +277,7 @@
       </button>
 
 
-      <!-- =================================================
-           DESKTOP LOCATION
-      ================================================== -->
+      <!-- LOCATION -->
 
       <div class="location-dropdown">
 
@@ -209,14 +308,12 @@
               Select Location
             </div>
 
-
             <button
               type="button"
               (click)="selectLocation('Mumbai')"
             >
               Mumbai
             </button>
-
 
             <button
               type="button"
@@ -225,14 +322,12 @@
               Delhi
             </button>
 
-
             <button
               type="button"
               (click)="selectLocation('Bengaluru')"
             >
               Bengaluru
             </button>
-
 
             <button
               type="button"
@@ -241,14 +336,12 @@
               Hyderabad
             </button>
 
-
             <button
               type="button"
               (click)="selectLocation('Chennai')"
             >
               Chennai
             </button>
-
 
             <button
               type="button"
@@ -257,14 +350,12 @@
               Kolkata
             </button>
 
-
             <button
               type="button"
               (click)="selectLocation('Pune')"
             >
               Pune
             </button>
-
 
             <button
               type="button"
@@ -281,6 +372,7 @@
 
 
       <!-- CART -->
+
       <button
         class="header-action cart-action"
         type="button"
@@ -301,6 +393,7 @@
 
 
       <!-- SIGN IN -->
+
       <button
         class="header-action"
         type="button"
@@ -321,7 +414,7 @@
 
 
   <!-- =====================================================
-       DESKTOP NAVIGATION
+       NAVIGATION
   ====================================================== -->
 
   <nav class="main-navigation">
@@ -333,14 +426,12 @@
       Women
     </button>
 
-
     <button
       type="button"
       (click)="navigate('Men')"
     >
       Men
     </button>
-
 
     <button
       type="button"
@@ -349,14 +440,12 @@
       Kids
     </button>
 
-
     <button
       type="button"
       (click)="navigate('Jewellery')"
     >
       Jewellery
     </button>
-
 
     <button
       type="button"
@@ -365,7 +454,6 @@
       Occasions
     </button>
 
-
     <button
       type="button"
       (click)="navigate('Brands')"
@@ -373,14 +461,12 @@
       Brands
     </button>
 
-
     <button
       type="button"
       (click)="navigate('New Arrivals')"
     >
       New Arrivals
     </button>
-
 
     <button
       type="button"
@@ -394,107 +480,103 @@
 
   <!-- =====================================================
        MOBILE MENU
+       ONLY:
+       Become a Seller
+       Location
+       How It Works
+       Message
+       Sign in / Register
   ====================================================== -->
 
   @if (mobileMenuOpen) {
 
-    <div class="mobile-menu">
+    <!-- DARK OVERLAY -->
+
+    <div
+      class="mobile-menu-overlay"
+      (click)="toggleMobileMenu()"
+    ></div>
 
 
-      <!-- WOMEN -->
-      <button
-        type="button"
-        (click)="navigate('Women')"
-      >
-        Women
-      </button>
+    <!-- SIDE MENU -->
 
+    <aside class="mobile-menu">
 
-      <!-- MEN -->
-      <button
-        type="button"
-        (click)="navigate('Men')"
-      >
-        Men
-      </button>
+      <!-- MENU HEADER -->
 
+      <div class="mobile-menu-header">
 
-      <!-- KIDS -->
-      <button
-        type="button"
-        (click)="navigate('Kids')"
-      >
-        Kids
-      </button>
-
-
-      <!-- JEWELLERY -->
-      <button
-        type="button"
-        (click)="navigate('Jewellery')"
-      >
-        Jewellery
-      </button>
-
-
-      <!-- OCCASIONS -->
-      <button
-        type="button"
-        (click)="navigate('Occasions')"
-      >
-        Occasions
-      </button>
-
-
-      <!-- BRANDS -->
-      <button
-        type="button"
-        (click)="navigate('Brands')"
-      >
-        Brands
-      </button>
-
-
-      <!-- NEW ARRIVALS -->
-      <button
-        type="button"
-        (click)="navigate('New Arrivals')"
-      >
-        New Arrivals
-      </button>
-
-
-      <!-- HOW IT WORKS -->
-      <button
-        type="button"
-        (click)="navigate('How It Works')"
-      >
-        How It Works
-      </button>
-
-
-      <!-- =================================================
-           MOBILE LOCATION
-      ================================================== -->
-
-      <div class="mobile-location-section">
+        <div class="mobile-menu-title">
+          Menu
+        </div>
 
         <button
           type="button"
-          class="mobile-location-button"
+          class="mobile-menu-close"
+          (click)="toggleMobileMenu()"
+          aria-label="Close menu"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <!-- ===============================================
+           BECOME A SELLER
+      ================================================ -->
+
+      <button
+        type="button"
+        class="mobile-menu-item"
+        (click)="handleAction('Become a Seller')"
+      >
+
+        <span class="mobile-menu-item-icon">
+          👤
+        </span>
+
+        <span class="mobile-menu-item-text">
+          Become a Seller
+        </span>
+
+        <span class="mobile-menu-arrow">
+          ›
+        </span>
+
+      </button>
+
+
+      <!-- ===============================================
+           LOCATION
+      ================================================ -->
+
+      <div class="mobile-menu-location">
+
+        <button
+          type="button"
+          class="mobile-menu-item"
           (click)="toggleLocationDropdown()"
         >
 
-          <span class="mobile-location-icon">
+          <span class="mobile-menu-item-icon">
             📍
           </span>
 
-          <span>
-            {{ selectedLocation }}
+          <span class="mobile-menu-item-content">
+
+            <span class="mobile-menu-item-text">
+              Location
+            </span>
+
+            <small>
+              {{ selectedLocation }}
+            </small>
+
           </span>
 
-          <span class="mobile-location-arrow">
-            {{ locationDropdownOpen ? '▲' : '▼' }}
+          <span class="mobile-menu-arrow">
+            {{ locationDropdownOpen ? '⌃' : '›' }}
           </span>
 
         </button>
@@ -504,14 +586,12 @@
 
           <div class="mobile-location-menu">
 
-
             <button
               type="button"
               (click)="selectLocation('Mumbai')"
             >
               Mumbai
             </button>
-
 
             <button
               type="button"
@@ -520,14 +600,12 @@
               Delhi
             </button>
 
-
             <button
               type="button"
               (click)="selectLocation('Bengaluru')"
             >
               Bengaluru
             </button>
-
 
             <button
               type="button"
@@ -536,14 +614,12 @@
               Hyderabad
             </button>
 
-
             <button
               type="button"
               (click)="selectLocation('Chennai')"
             >
               Chennai
             </button>
-
 
             <button
               type="button"
@@ -552,14 +628,12 @@
               Kolkata
             </button>
 
-
             <button
               type="button"
               (click)="selectLocation('Pune')"
             >
               Pune
             </button>
-
 
             <button
               type="button"
@@ -575,42 +649,81 @@
       </div>
 
 
-      <!-- =================================================
-           MOBILE MESSAGE
-      ================================================== -->
+      <!-- ===============================================
+           HOW IT WORKS
+      ================================================ -->
 
       <button
         type="button"
+        class="mobile-menu-item"
+        (click)="navigate('How It Works')"
+      >
+
+        <span class="mobile-menu-item-icon">
+          ❓
+        </span>
+
+        <span class="mobile-menu-item-text">
+          How It Works
+        </span>
+
+        <span class="mobile-menu-arrow">
+          ›
+        </span>
+
+      </button>
+
+
+      <!-- ===============================================
+           MESSAGE
+      ================================================ -->
+
+      <button
+        type="button"
+        class="mobile-menu-item"
         (click)="goToMessages()"
       >
-        Message
+
+        <span class="mobile-menu-item-icon">
+          💬
+        </span>
+
+        <span class="mobile-menu-item-text">
+          Message
+        </span>
+
+        <span class="mobile-menu-arrow">
+          ›
+        </span>
+
       </button>
 
 
-      <!-- =================================================
-           MOBILE CART
-      ================================================== -->
+      <!-- ===============================================
+           SIGN IN / REGISTER
+      ================================================ -->
 
       <button
         type="button"
-        (click)="handleAction('Cart')"
-      >
-        Cart
-      </button>
-
-
-      <!-- =================================================
-           MOBILE SIGN IN
-      ================================================== -->
-
-      <button
-        type="button"
+        class="mobile-menu-item mobile-login-item"
         (click)="handleAction('Sign in / Register')"
       >
-        Sign in / Register
+
+        <span class="mobile-menu-item-icon">
+          🔐
+        </span>
+
+        <span class="mobile-menu-item-text">
+          Sign in / Register
+        </span>
+
+        <span class="mobile-menu-arrow">
+          ›
+        </span>
+
       </button>
 
-    </div>
+    </aside>
 
   }
 

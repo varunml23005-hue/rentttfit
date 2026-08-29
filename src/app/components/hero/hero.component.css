@@ -1509,3 +1509,516 @@
   }
 
 }
+
+
+
+/* =========================================================
+   RENTFITS MOBILE HERO
+   CLIENT DESIGN
+   DESKTOP IS NOT AFFECTED
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* =======================================================
+     MAIN HERO
+  ======================================================= */
+
+  .hero {
+    position: relative !important;
+
+    width: 100% !important;
+
+    height: 255px !important;
+
+    min-height: 255px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+
+    background: #fde8ed !important;
+
+    border-radius: 0 0 12px 12px;
+
+    box-sizing: border-box;
+
+    display: block !important;
+  }
+
+
+  /* =======================================================
+     HERO IMAGE
+
+     IMAGE IS NOW ONLY ON THE RIGHT SIDE
+  ======================================================= */
+
+  .hero-image {
+    position: absolute !important;
+
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: auto !important;
+
+    width: 53% !important;
+    height: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background-image:
+      url('/images/rentfits-hero-bg.png') !important;
+
+    background-repeat: no-repeat !important;
+
+    /*
+      IMPORTANT:
+      Keep the original image proportions.
+    */
+
+    background-size: auto 100% !important;
+
+    background-position: right center !important;
+
+    background-color: #f9cbd3 !important;
+
+    z-index: 1 !important;
+  }
+
+
+  /* =======================================================
+     REMOVE DESKTOP IMAGE OVERLAY
+  ======================================================= */
+
+  .hero-image::after {
+    display: none !important;
+  }
+
+
+  /* =======================================================
+     HERO CONTENT
+
+     TEXT IS COMPLETELY ON LEFT
+  ======================================================= */
+
+  .hero-content {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 52% !important;
+    height: 100% !important;
+
+    margin: 0 !important;
+    padding: 38px 8px 15px 20px !important;
+
+    transform: none !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: flex-start !important;
+
+    justify-content: flex-start !important;
+
+    text-align: left !important;
+
+    background: transparent !important;
+
+    box-sizing: border-box;
+
+    z-index: 5 !important;
+  }
+
+
+  /* =======================================================
+     MAIN TITLE
+  ======================================================= */
+
+  .hero-content h1 {
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    color: #111111 !important;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif !important;
+
+    font-size: 22px !important;
+
+    line-height: 1.12 !important;
+
+    font-weight: 700 !important;
+
+    letter-spacing: -0.5px !important;
+
+    text-align: left !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* =======================================================
+     PINK TITLE
+  ======================================================= */
+
+  .hero-content h2 {
+    width: 100% !important;
+
+    margin: 3px 0 0 !important;
+
+    padding: 0 !important;
+
+    color: #ed3f70 !important;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif !important;
+
+    font-size: 22px !important;
+
+    line-height: 1.05 !important;
+
+    font-weight: 700 !important;
+
+    letter-spacing: -0.4px !important;
+
+    text-align: left !important;
+
+    white-space: normal !important;
+  }
+
+
+  /* =======================================================
+     DESCRIPTION
+  ======================================================= */
+
+  .hero-description {
+    width: 100% !important;
+
+    max-width: 190px !important;
+
+    margin: 10px 0 0 !important;
+
+    padding: 0 !important;
+
+    color: #333333 !important;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif !important;
+
+    font-size: 9px !important;
+
+    line-height: 1.55 !important;
+
+    text-align: left !important;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =======================================================
+     HERO BUTTONS
+  ======================================================= */
+
+  .hero-buttons {
+    width: 100% !important;
+
+    margin: 11px 0 0 !important;
+
+    padding: 0 !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: flex-start !important;
+
+    justify-content: flex-start !important;
+
+    gap: 6px !important;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =======================================================
+     PRIMARY + SECONDARY BUTTON
+  ======================================================= */
+
+  .primary-button,
+  .secondary-button {
+    width: 140px !important;
+
+    max-width: 140px !important;
+
+    height: 30px !important;
+
+    min-height: 30px !important;
+
+    padding: 0 8px !important;
+
+    border-radius: 5px !important;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif !important;
+
+    font-size: 9px !important;
+
+    font-weight: 700 !important;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+  }
+
+
+  /* =======================================================
+     PRIMARY BUTTON
+  ======================================================= */
+
+  .primary-button {
+    border: none !important;
+
+    background: #ed3f70 !important;
+
+    color: #ffffff !important;
+
+    box-shadow: none !important;
+  }
+
+
+  .primary-button:hover {
+    background: #ed3f70 !important;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+  }
+
+
+  /* =======================================================
+     SECONDARY BUTTON
+  ======================================================= */
+
+  .secondary-button {
+    border: 1px solid #555555 !important;
+
+    background: #ffffff !important;
+
+    color: #222222 !important;
+
+    box-shadow: none !important;
+  }
+
+
+  .secondary-button:hover {
+    border-color: #555555 !important;
+
+    color: #222222 !important;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+  }
+
+
+  /* =======================================================
+     HERO CAROUSEL DOTS
+  ======================================================= */
+
+  .hero-dots {
+    position: absolute !important;
+
+    left: 50% !important;
+
+    bottom: 8px !important;
+
+    transform: translateX(-50%) !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 5px !important;
+
+    z-index: 10 !important;
+  }
+
+
+  .hero-dots span {
+    display: block !important;
+
+    width: 7px !important;
+
+    height: 4px !important;
+
+    border-radius: 5px !important;
+
+    background: #ffffff !important;
+  }
+
+
+  .hero-dots span.active {
+    width: 13px !important;
+
+    background: #ed3f70 !important;
+  }
+
+
+  /* =======================================================
+     VIRTUAL TRY-ON
+
+     HIDDEN ON MOBILE
+     CLIENT DESIGN DOES NOT SHOW IT HERE
+  ======================================================= */
+
+  .try-on-card {
+    display: none !important;
+  }
+
+
+  /* =======================================================
+     EARN BY RENTING
+
+     HIDDEN ON MOBILE HERE
+
+     It will be implemented later in the correct
+     client-design position.
+  ======================================================= */
+
+  .earn-renting-card {
+    display: none !important;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .hero {
+    height: 255px !important;
+
+    min-height: 255px !important;
+  }
+
+
+  /* =======================================================
+     IMAGE
+  ======================================================= */
+
+  .hero-image {
+    width: 54% !important;
+
+    height: 100% !important;
+
+    background-size: auto 100% !important;
+
+    background-position: right center !important;
+  }
+
+
+  /* =======================================================
+     LEFT CONTENT
+  ======================================================= */
+
+  .hero-content {
+    width: 53% !important;
+
+    padding:
+      39px
+      6px
+      12px
+      20px !important;
+  }
+
+
+  /* =======================================================
+     TITLE
+  ======================================================= */
+
+  .hero-content h1 {
+    font-size: 21px !important;
+
+    line-height: 1.1 !important;
+  }
+
+
+  .hero-content h2 {
+    font-size: 21px !important;
+
+    line-height: 1.03 !important;
+
+    margin-top: 3px !important;
+  }
+
+
+  /* =======================================================
+     DESCRIPTION
+  ======================================================= */
+
+  .hero-description {
+    max-width: 175px !important;
+
+    margin-top: 9px !important;
+
+    font-size: 8.5px !important;
+
+    line-height: 1.5 !important;
+  }
+
+
+  /* =======================================================
+     BUTTONS
+  ======================================================= */
+
+  .hero-buttons {
+    margin-top: 10px !important;
+
+    gap: 5px !important;
+  }
+
+
+  .primary-button,
+  .secondary-button {
+    width: 140px !important;
+
+    max-width: 140px !important;
+
+    height: 30px !important;
+
+    min-height: 30px !important;
+
+    font-size: 8.5px !important;
+  }
+
+
+  /* =======================================================
+     DOTS
+  ======================================================= */
+
+  .hero-dots {
+    bottom: 7px !important;
+  }
+
+}
