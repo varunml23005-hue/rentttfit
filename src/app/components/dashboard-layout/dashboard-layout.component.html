@@ -1,0 +1,165 @@
+<div class="flex h-screen bg-gray-50 overflow-hidden font-sans text-gray-900">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-white border-r border-gray-100 hidden md:flex flex-col">
+    <div class="p-6 flex items-center gap-2">
+      <div class="w-8 h-8 bg-primary text-white rounded-md flex items-center justify-center font-bold text-lg">
+        R
+      </div>
+      <span class="font-bold text-xl tracking-tight text-gray-900">RentFits</span>
+    </div>
+
+    <nav class="flex-1 px-4 space-y-1 overflow-y-auto">
+      <!-- Dashboard -->
+      <a [routerLink]="navItems[0].path"
+         [class]="isActive(navItems[0].path) ? 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors bg-primary-light text-primary' : 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900'">
+        <div class="flex items-center gap-3">
+          <svg lucideLayoutDashboard [class]="isActive(navItems[0].path) ? 'w-5 h-5 text-primary' : 'w-5 h-5 text-gray-400'"></svg>
+          {{navItems[0].name}}
+        </div>
+      </a>
+      <!-- My Listings -->
+      <a [routerLink]="navItems[1].path"
+         [class]="isActive(navItems[1].path) ? 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors bg-primary-light text-primary' : 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900'">
+        <div class="flex items-center gap-3">
+          <svg lucideList [class]="isActive(navItems[1].path) ? 'w-5 h-5 text-primary' : 'w-5 h-5 text-gray-400'"></svg>
+          {{navItems[1].name}}
+        </div>
+      </a>
+      <!-- Add New Listing -->
+      <a [routerLink]="navItems[2].path"
+         [class]="isActive(navItems[2].path) ? 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors bg-primary-light text-primary' : 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-primary hover:bg-primary-light'">
+        <div class="flex items-center gap-3">
+          <svg lucidePlusSquare class="w-5 h-5"></svg>
+          {{navItems[2].name}}
+        </div>
+      </a>
+      <!-- My Orders -->
+      <a [routerLink]="navItems[3].path"
+         [class]="isActive(navItems[3].path) ? 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors bg-primary-light text-primary' : 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900'">
+        <div class="flex items-center gap-3">
+          <svg lucideShoppingBag [class]="isActive(navItems[3].path) ? 'w-5 h-5 text-primary' : 'w-5 h-5 text-gray-400'"></svg>
+          {{navItems[3].name}}
+        </div>
+      </a>
+      <!-- Messages (Navigates to Varun's Chat App at /messages) -->
+      <a [routerLink]="navItems[4].path"
+         [class]="isActive(navItems[4].path) ? 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors bg-primary-light text-primary' : 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900'">
+        <div class="flex items-center gap-3">
+          <svg lucideMessageSquare [class]="isActive(navItems[4].path) ? 'w-5 h-5 text-primary' : 'w-5 h-5 text-gray-400'"></svg>
+          {{navItems[4].name}}
+        </div>
+        <span class="bg-primary text-white text-xs font-bold px-2 py-0.5 rounded-full">3</span>
+      </a>
+      <!-- Wishlist -->
+      <a [routerLink]="navItems[5].path"
+         [class]="isActive(navItems[5].path) ? 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors bg-primary-light text-primary' : 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900'">
+        <div class="flex items-center gap-3">
+          <svg lucideHeart [class]="isActive(navItems[5].path) ? 'w-5 h-5 text-primary' : 'w-5 h-5 text-gray-400'"></svg>
+          {{navItems[5].name}}
+        </div>
+      </a>
+      <!-- Earnings -->
+      <a [routerLink]="navItems[6].path"
+         [class]="isActive(navItems[6].path) ? 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors bg-primary-light text-primary' : 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900'">
+        <div class="flex items-center gap-3">
+          <svg lucideWallet [class]="isActive(navItems[6].path) ? 'w-5 h-5 text-primary' : 'w-5 h-5 text-gray-400'"></svg>
+          {{navItems[6].name}}
+        </div>
+      </a>
+      <!-- Profile Settings -->
+      <a [routerLink]="navItems[7].path"
+         [class]="isActive(navItems[7].path) ? 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors bg-primary-light text-primary' : 'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-gray-600 hover:bg-gray-50 hover:text-gray-900'">
+        <div class="flex items-center gap-3">
+          <svg lucideSettings [class]="isActive(navItems[7].path) ? 'w-5 h-5 text-primary' : 'w-5 h-5 text-gray-400'"></svg>
+          {{navItems[7].name}}
+        </div>
+      </a>
+    </nav>
+
+    <!-- Promo Banner -->
+    <div class="p-4 mt-auto">
+      <div class="bg-primary-light rounded-xl p-4 text-center relative overflow-hidden">
+        <h4 class="font-bold text-gray-900 text-sm mb-1">List for FREE</h4>
+        <p class="text-xs text-gray-600 mb-3">No hidden charges. Only success, when you earn.</p>
+        <button class="bg-primary text-white text-xs font-semibold py-2 px-4 rounded-lg w-full">
+          Become a Seller
+        </button>
+        <img
+          src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=150&q=80"
+          alt="Promo"
+          class="absolute -bottom-4 -right-4 w-16 h-16 rounded-full opacity-50 object-cover mix-blend-multiply"
+        />
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="flex-1 flex flex-col min-w-0">
+    <!-- Header -->
+    <header class="bg-white h-16 border-b border-gray-100 flex items-center justify-between px-6 shrink-0">
+      <div class="flex-1 max-w-lg">
+        <div class="relative group">
+          <svg lucideSearch class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2"></svg>
+          <input
+            type="text"
+            placeholder="Search for outfits, jewelry, brands..."
+            class="w-full pl-10 pr-12 py-2 bg-gray-50 border-none rounded-lg text-sm focus:ring-1 focus:ring-primary outline-none transition-all"
+          />
+          <button class="absolute right-0 top-0 bottom-0 bg-primary text-white px-3 rounded-r-lg flex items-center justify-center">
+            <svg lucideSearch class="w-4 h-4"></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-5 ml-4">
+        <a routerLink="/" class="text-sm font-medium text-gray-600 hidden sm:flex items-center gap-1 hover:text-primary transition-colors">
+          ← Back to Landing Page
+        </a>
+        <a routerLink="/messages" class="relative text-gray-400 hover:text-gray-600">
+          <svg lucideMessageCircle class="w-6 h-6"></svg>
+        </a>
+        <button class="relative text-gray-400 hover:text-gray-600">
+          <svg lucideBell class="w-6 h-6"></svg>
+          <span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full border-2 border-white"></span>
+        </button>
+        <img
+          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=32&h=32&q=80"
+          alt="User"
+          class="w-8 h-8 rounded-full border border-gray-200"
+        />
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <main class="flex-1 overflow-y-auto bg-gray-50 p-6">
+      <router-outlet></router-outlet>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-6 px-8 mt-auto shrink-0 text-sm text-gray-500">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 bg-primary text-white rounded flex items-center justify-center font-bold text-xs">
+            R
+          </div>
+          <span class="font-bold text-gray-900">RentFits</span>
+        </div>
+        <div class="flex flex-wrap gap-x-8 gap-y-2">
+          <div class="flex flex-col gap-1">
+            <h5 class="font-bold text-gray-900 mb-1">COMPANY</h5>
+            <a href="#" class="hover:text-primary">About Us</a>
+            <a href="#" class="hover:text-primary">How It Works</a>
+          </div>
+          <div class="flex flex-col gap-1">
+            <h5 class="font-bold text-gray-900 mb-1">SUPPORT</h5>
+            <a href="#" class="hover:text-primary">Help Center</a>
+            <a href="#" class="hover:text-primary">Contact Us</a>
+          </div>
+        </div>
+        <div class="text-right">
+          <p>© 2024 RentFits. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

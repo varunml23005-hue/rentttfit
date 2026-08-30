@@ -20,8 +20,8 @@ export class HeaderComponent {
   mobileMenuOpen = false;
 
   toggleMobileMenu(): void {
-  this.mobileMenuOpen = !this.mobileMenuOpen;
-}
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
 
   toggleLocationDropdown(): void {
     this.locationDropdownOpen = !this.locationDropdownOpen;
@@ -40,18 +40,22 @@ export class HeaderComponent {
     if (!this.searchText.trim()) {
       return;
     }
-
     console.log('Searching for:', this.searchText);
   }
 
   // HOME
   goHome(): void {
-    console.log('RentFits Home');
+    this.router.navigate(['/']);
   }
 
   // HEADER ACTIONS
   handleAction(action: string): void {
     console.log(action + ' clicked');
+    if (action === 'Become a Seller' || action === 'Sign in / Register' || action === 'Dashboard') {
+      this.router.navigate(['/dashboard']);
+    } else if (action === 'Wishlist') {
+      this.router.navigate(['/dashboard/wishlist']);
+    }
   }
 
   // MESSAGE
@@ -62,6 +66,9 @@ export class HeaderComponent {
   // NAVIGATION
   navigate(section: string): void {
     console.log(section + ' clicked');
+    if (section === 'Women' || section === 'Men' || section === 'Kids' || section === 'Jewellery' || section === 'Brands' || section === 'Occasions' || section === 'New Arrivals') {
+      this.router.navigate(['/catalogue']);
+    }
   }
 
 }
