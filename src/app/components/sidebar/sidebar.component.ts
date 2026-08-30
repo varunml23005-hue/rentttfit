@@ -77,21 +77,17 @@ export class SidebarComponent
       [...this.chats];
 
 
-    // Select first chat
+    // Set selected ID for desktop styling only
+    // DO NOT automatically emit/open first chat
     if (this.chats.length > 0) {
 
       this.selectedChatId =
         this.chats[0].id;
 
-
-      this.chatSelected.emit(
-        this.chats[0]
-      );
-
     }
 
 
-    // ⭐ LISTEN FOR CHAT ORDER CHANGES
+    // LISTEN FOR CHAT ORDER CHANGES
     this.chatsSubscription =
       this.chatService.chatsChanged.subscribe(
         (chats: Chat[]) => {
@@ -107,7 +103,7 @@ export class SidebarComponent
 
 
   // =========================================
-  // SELECT CHAT
+  // SELECT CHAT - ONLY WHEN USER CLICKS
   // =========================================
 
   selectChat(chat: Chat): void {
@@ -116,6 +112,7 @@ export class SidebarComponent
       chat.id;
 
 
+    // This only happens when user clicks a chat
     this.chatSelected.emit(
       chat
     );

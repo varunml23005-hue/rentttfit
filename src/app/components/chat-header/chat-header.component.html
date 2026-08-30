@@ -1,13 +1,33 @@
 <div class="chat-header">
 
-  <!-- LEFT SIDE -->
+  <!-- =========================================
+       MOBILE BACK BUTTON
+       MOBILE ONLY
+  ========================================== -->
+
+  <button
+    type="button"
+    class="mobile-back-btn"
+    (click)="goBack()"
+    aria-label="Back to messages">
+
+    <i class="fa-solid fa-arrow-left"></i>
+
+  </button>
+
+
+  <!-- =========================================
+       LEFT SIDE
+  ========================================== -->
+
   <div class="left">
 
     <div class="avatar-wrapper">
 
       <img
         [src]="chat.avatar"
-        class="avatar">
+        class="avatar"
+        [alt]="chat.name">
 
       <span
         class="header-status"
@@ -15,6 +35,7 @@
       </span>
 
     </div>
+
 
     <div class="user-info">
 
@@ -43,27 +64,122 @@
   </div>
 
 
-  <!-- RIGHT SIDE -->
-  <div class="right">
+  <!-- =========================================
+       DESKTOP ACTIONS
+       DESKTOP ONLY
+  ========================================== -->
 
-  <button class="icon-btn whatsapp" title="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </button>
+  <div class="desktop-actions">
 
-  <button class="icon-btn call" title="Call">
-    <i class="fas fa-phone"></i>
-  </button>
+    <!-- WhatsApp -->
 
-  <button class="icon-btn email" title="Email">
-    <i class="fas fa-envelope"></i>
-  </button>
+    <button
+      type="button"
+      class="header-action whatsapp-action"
+      title="WhatsApp"
+      (click)="openWhatsApp()">
 
-  <button class="icon-btn more" title="More options">
-    <i class="fas fa-ellipsis-v"></i>
-  </button>
+      <i class="fa-brands fa-whatsapp"></i>
 
-</div>
+    </button>
 
 
+    <!-- Call -->
+
+    <button
+      type="button"
+      class="header-action call-action"
+      title="Call"
+      (click)="makeCall()">
+
+      <i class="fa-solid fa-phone"></i>
+
+    </button>
+
+
+    <!-- Email -->
+
+    <button
+      type="button"
+      class="header-action mail-action"
+      title="Email"
+      (click)="sendEmail()">
+
+      <i class="fa-solid fa-envelope"></i>
+
+    </button>
+
+  </div>
+
+
+  <!-- =========================================
+       MOBILE THREE DOT MENU
+       MOBILE ONLY
+  ========================================== -->
+
+  <div class="mobile-menu-wrapper">
+
+    <button
+      type="button"
+      class="mobile-more-btn"
+      (click)="toggleMenu()"
+      aria-label="More options">
+
+      <i class="fa-solid fa-ellipsis-vertical"></i>
+
+    </button>
+
+
+    <!-- MOBILE DROPDOWN -->
+
+    <div
+      class="mobile-dropdown"
+      *ngIf="showMenu">
+
+
+      <!-- WhatsApp -->
+
+      <button
+        type="button"
+        class="mobile-menu-item"
+        (click)="openWhatsApp()">
+
+        <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+
+        <span>WhatsApp</span>
+
+      </button>
+
+
+      <!-- Call -->
+
+      <button
+        type="button"
+        class="mobile-menu-item"
+        (click)="makeCall()">
+
+        <i class="fa-solid fa-phone call-icon"></i>
+
+        <span>Call</span>
+
+      </button>
+
+
+      <!-- Email -->
+
+      <button
+        type="button"
+        class="mobile-menu-item"
+        (click)="sendEmail()">
+
+        <i class="fa-solid fa-envelope email-icon"></i>
+
+        <span>Email</span>
+
+      </button>
+
+    </div>
+
+  </div>
 
 </div>
