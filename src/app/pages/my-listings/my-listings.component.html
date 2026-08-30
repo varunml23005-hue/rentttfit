@@ -1,0 +1,58 @@
+<div class="max-w-6xl mx-auto space-y-6">
+  <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+    <div>
+      <h1 class="text-2xl font-bold text-gray-900">My Listings</h1>
+      <p class="text-gray-500 text-sm mt-1">Manage your wardrobe items here.</p>
+    </div>
+    <a routerLink="/dashboard/listings/new" class="bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-colors">
+      <svg lucidePlus class="w-4 h-4"></svg>
+      Add New Listing
+    </a>
+  </div>
+
+  <div class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b border-gray-100 text-sm text-gray-500">
+            <th class="px-6 py-4 font-semibold">Item</th>
+            <th class="px-6 py-4 font-semibold">Price</th>
+            <th class="px-6 py-4 font-semibold">Bookings</th>
+            <th class="px-6 py-4 font-semibold">Status</th>
+            <th class="px-6 py-4 font-semibold text-right">Action</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          @for (item of listingService.listings(); track item.id) {
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-4">
+                  <img [src]="item.image" [alt]="item.title" class="w-12 h-12 rounded-lg object-cover" />
+                  <div>
+                    <p class="font-semibold text-gray-900 text-sm">{{item.title}}</p>
+                    <p class="text-xs text-gray-500 mt-0.5">{{item.category}} • {{item.brand}}</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <p class="text-sm font-semibold text-gray-900">₹{{item.price}}</p>
+                <p class="text-xs text-gray-500">per {{item.duration}}</p>
+              </td>
+              <td class="px-6 py-4 text-sm font-semibold text-gray-900">
+                {{item.bookings}}
+              </td>
+              <td class="px-6 py-4">
+                <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-green-50 text-green-600">
+                  {{item.status}}
+                </span>
+              </td>
+              <td class="px-6 py-4 text-right">
+                <button class="text-primary text-sm font-semibold hover:underline">Edit</button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

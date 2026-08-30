@@ -1,0 +1,244 @@
+<div class="max-w-4xl mx-auto bg-white rounded-xl border border-gray-100 shadow-sm min-h-[600px] flex flex-col">
+  <!-- Wizard Header -->
+  <div class="p-6 border-b border-gray-100">
+    <div class="flex items-center mb-6">
+      <button (click)="handleBack()" class="text-gray-400 hover:text-gray-600 transition-colors">
+        <svg lucideChevronLeft class="w-5 h-5"></svg>
+      </button>
+      <h2 class="text-xl font-bold text-gray-900 ml-2">Add New Listing</h2>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="flex justify-between items-center relative px-2">
+      <div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-0.5 bg-gray-100 -z-10"></div>
+      @for (step of steps; track step; let i = $index) {
+        <div class="flex flex-col items-center bg-white px-2 z-10">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mb-2 transition-colors"
+               [class]="isCompleted(i) ? 'bg-green-500 text-white' : isActive(i) ? 'bg-primary text-white' : 'bg-gray-100 text-gray-400'">
+            @if (isCompleted(i)) {
+              <svg lucideCheckCircle2 class="w-5 h-5"></svg>
+            } @else {
+              {{i + 1}}
+            }
+          </div>
+          <span class="text-xs font-semibold" [class]="i <= currentStep ? 'text-gray-900' : 'text-gray-400'">
+            {{step}}
+          </span>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Step Content -->
+  <div class="flex-1 p-6 sm:p-8">
+    <!-- Step 0: Photos -->
+    @if (currentStep === 0) {
+      <div class="space-y-6">
+        <h3 class="text-lg font-bold text-gray-900">Upload Photos</h3>
+        <p class="text-sm text-gray-500">Add up to 10 photos. First photo will be your cover photo.</p>
+        <div class="border-2 border-dashed border-gray-200 rounded-xl p-10 flex flex-col items-center justify-center text-center hover:bg-gray-50 transition-colors cursor-pointer">
+          <svg lucideUploadCloud class="w-12 h-12 text-gray-300 mb-4"></svg>
+          <p class="text-gray-900 font-semibold">Drag & drop photos here</p>
+          <p class="text-sm text-gray-500 mt-1 mb-4">or</p>
+          <button class="bg-primary text-white px-6 py-2 rounded-lg font-semibold text-sm">Upload Photos</button>
+          <p class="text-xs text-gray-400 mt-4">JPG, PNG (Max 10MB each)</p>
+        </div>
+      </div>
+    }
+
+    <!-- Step 1: Details -->
+    @if (currentStep === 1) {
+      <div class="space-y-6">
+        <h3 class="text-lg font-bold text-gray-900">Item Details</h3>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-semibold text-gray-900 mb-1.5">Title <span class="text-primary">*</span></label>
+            <input type="text" [(ngModel)]="formData.title" class="w-full border border-gray-200 rounded-lg p-2.5 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="e.g. Pink Embroidered Bridal Lehenga" />
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold text-gray-900 mb-1.5">Category <span class="text-primary">*</span></label>
+              <select [(ngModel)]="formData.category" class="w-full border border-gray-200 rounded-lg p-2.5 text-sm bg-white focus:border-primary outline-none">
+                <option value="">Select Category</option>
+                <option value="Lehenga">Lehenga</option>
+                <option value="Saree">Saree</option>
+                <option value="Jewelry">Jewelry</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-900 mb-1.5">Brand</label>
+              <input type="text" [(ngModel)]="formData.brand" class="w-full border border-gray-200 rounded-lg p-2.5 text-sm focus:border-primary outline-none" placeholder="e.g. Manish Malhotra" />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold text-gray-900 mb-1.5">Size <span class="text-primary">*</span></label>
+              <select [(ngModel)]="formData.size" class="w-full border border-gray-200 rounded-lg p-2.5 text-sm bg-white focus:border-primary outline-none">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-900 mb-1.5">Condition <span class="text-primary">*</span></label>
+              <select [(ngModel)]="formData.condition" class="w-full border border-gray-200 rounded-lg p-2.5 text-sm bg-white focus:border-primary outline-none">
+                <option value="">Select Condition</option>
+                <option value="Like New">Like New</option>
+                <option value="Good">Good</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-900 mb-1.5">Description <span class="text-primary">*</span></label>
+            <textarea [(ngModel)]="formData.description" class="w-full border border-gray-200 rounded-lg p-2.5 text-sm focus:border-primary outline-none min-h-[100px]" placeholder="Describe your item in detail..."></textarea>
+          </div>
+        </div>
+      </div>
+    }
+
+    <!-- Step 2: Pricing -->
+    @if (currentStep === 2) {
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="space-y-6">
+          <h3 class="text-lg font-bold text-gray-900">Pricing Details</h3>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-semibold text-gray-900 mb-1.5">Rental Price <span class="text-primary">*</span></label>
+              <div class="flex gap-2">
+                <div class="relative flex-1">
+                  <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">₹</span>
+                  <input type="number" [(ngModel)]="formData.rentalPrice" class="w-full border border-gray-200 rounded-lg pl-8 pr-3 py-2.5 text-sm focus:border-primary outline-none" placeholder="499" />
+                </div>
+                <select class="border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:border-primary outline-none">
+                  <option>for 3 Days</option>
+                  <option>for 5 Days</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-900 mb-1.5">Security Deposit <span class="text-primary">*</span></label>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">₹</span>
+                <input type="number" [(ngModel)]="formData.securityDeposit" class="w-full border border-gray-200 rounded-lg pl-8 pr-3 py-2.5 text-sm focus:border-primary outline-none" placeholder="2000" />
+              </div>
+              <p class="text-xs text-gray-500 mt-1">Refundable security amount</p>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-900 mb-1.5">Cleaning Charges</label>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">₹</span>
+                <input type="number" [(ngModel)]="formData.cleaningCharges" class="w-full border border-gray-200 rounded-lg pl-8 pr-3 py-2.5 text-sm focus:border-primary outline-none" placeholder="250" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Earnings Estimation -->
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 self-start">
+          <h4 class="font-bold text-gray-900 mb-4">Earnings Estimation</h4>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between text-gray-600">
+              <span>Base Price</span>
+              <span>₹{{formData.rentalPrice || '0'}}</span>
+            </div>
+            <div class="flex justify-between text-gray-600">
+              <span>Cleaning Charges</span>
+              <span>₹{{formData.cleaningCharges || '0'}}</span>
+            </div>
+            <div class="pt-3 border-t border-gray-200 flex justify-between font-bold text-gray-900">
+              <span class="text-green-600">You Earn</span>
+              <span class="text-green-600">₹{{estimatedEarnings}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+
+    <!-- Step 3: Availability -->
+    @if (currentStep === 3) {
+      <div class="space-y-6">
+        <h3 class="text-lg font-bold text-gray-900">Set Availability</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-semibold text-gray-900 mb-1.5">Available From <span class="text-primary">*</span></label>
+            <input type="date" class="w-full border border-gray-200 rounded-lg p-2.5 text-sm focus:border-primary outline-none" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-900 mb-1.5">Available To <span class="text-primary">*</span></label>
+            <input type="date" class="w-full border border-gray-200 rounded-lg p-2.5 text-sm focus:border-primary outline-none" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-900 mb-1.5">Blocked Dates</label>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1">
+              10 Jun - 15 Jun 2024 <svg lucideX class="w-3 h-3 cursor-pointer"></svg>
+            </span>
+          </div>
+          <button class="text-sm font-semibold text-gray-600 border border-gray-200 rounded-lg px-4 py-2 hover:bg-gray-50">+ Add Blocked Dates</button>
+        </div>
+      </div>
+    }
+
+    <!-- Step 4: Review -->
+    @if (currentStep === 4) {
+      <div class="space-y-6">
+        <div class="flex justify-between items-center">
+          <h3 class="text-lg font-bold text-gray-900">Review Your Listing</h3>
+          <button (click)="currentStep = 0" class="text-primary text-sm font-semibold hover:underline">Edit</button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-3 text-sm">Photos</h4>
+            <div class="grid grid-cols-2 gap-2">
+              <img [src]="formData.image" alt="Preview" class="w-full h-24 object-cover rounded-lg" />
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <h4 class="font-semibold text-gray-900 mb-3 text-sm">Details</h4>
+            <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+              <span class="text-gray-500">Title</span>
+              <span class="text-gray-900 font-medium truncate">{{formData.title || '-'}}</span>
+              <span class="text-gray-500">Category</span>
+              <span class="text-gray-900 font-medium">{{formData.category || '-'}}</span>
+              <span class="text-gray-500">Brand</span>
+              <span class="text-gray-900 font-medium">{{formData.brand || '-'}}</span>
+              <span class="text-gray-500">Size</span>
+              <span class="text-gray-900 font-medium">{{formData.size || '-'}}</span>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <h4 class="font-semibold text-gray-900 mb-3 text-sm">Pricing</h4>
+            <div class="flex justify-between">
+              <span class="text-gray-500">Rental Price</span>
+              <span class="text-gray-900 font-medium">₹{{formData.rentalPrice || '0'}}</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-500">Security Deposit</span>
+              <span class="text-gray-900 font-medium">₹{{formData.securityDeposit || '0'}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <!-- Footer Actions -->
+  <div class="p-6 border-t border-gray-100 flex justify-between items-center bg-gray-50 rounded-b-xl">
+    <button
+      (click)="handleBack()"
+      class="text-gray-600 font-semibold text-sm hover:text-gray-900 px-4 py-2"
+    >
+      {{currentStep === 0 ? 'Cancel' : '← Back'}}
+    </button>
+    <button
+      (click)="handleNext()"
+      class="bg-primary hover:bg-primary-hover text-white px-6 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-colors"
+    >
+      {{currentStep === steps.length - 1 ? 'Publish Listing' : 'Next: ' + steps[currentStep + 1]}}
+      @if (currentStep < steps.length - 1) {
+        <svg lucideArrowRight class="w-4 h-4"></svg>
+      }
+    </button>
+  </div>
+</div>
