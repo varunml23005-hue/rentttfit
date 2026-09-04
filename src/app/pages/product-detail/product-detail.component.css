@@ -202,6 +202,14 @@
   color: #fff;
   text-decoration: none;
 }
+.btn-wishlist {
+  background: #fff;
+  color: var(--rf-pink-dark);
+  border: 1.5px solid var(--rf-pink);
+}
+.btn-wishlist.added {
+  background: var(--rf-pink-light);
+}
 .btn.sm { padding: 9px 18px; font-size: 0.82rem; }
 
 .chat-panel {

@@ -22,6 +22,7 @@ export class ProductDetailComponent implements OnInit {
   product: Product | undefined;
   selectedSize = '';
   selectedImage = signal('');
+  wishlisted = signal(false);
 
   chatOpen = signal(false);
   messages = signal<ChatMessage[]>([]);
@@ -39,6 +40,7 @@ export class ProductDetailComponent implements OnInit {
     this.product = PRODUCTS.find((p) => p.id === id);
     this.selectedSize = '';
     this.selectedImage.set('');
+    this.wishlisted.set(false);
     this.chatOpen.set(false);
     this.messages.set([]);
     this.draft = '';
@@ -57,6 +59,10 @@ export class ProductDetailComponent implements OnInit {
 
   selectImage(image: string) {
     this.selectedImage.set(image);
+  }
+
+  toggleWishlist() {
+    this.wishlisted.update((value) => !value);
   }
 
   whatsappLink(): string {
