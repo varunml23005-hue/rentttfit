@@ -1,3 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #e11d48; /* rose-600 */
+  --color-primary-hover: #be123c; /* rose-700 */
+  --color-primary-light: #fff1f2; /* rose-50 */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -27,4 +35,4 @@ img {
 a {
   color: inherit;
   text-decoration: none;
-}/* You can add global styles to this file, and also import other style files */
+}

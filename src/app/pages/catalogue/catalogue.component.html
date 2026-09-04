@@ -14,8 +14,7 @@
       <input 
         type="text" 
         placeholder="Search products..." 
-        [ngModel]="searchTerm()"
-        (ngModelChange)="searchTerm.set($event)"
+        [(ngModel)]="searchTerm"
         class="search-input"
       />
     </div>
@@ -23,7 +22,7 @@
     <!-- Category -->
     <div class="filter-group">
       <label>Category</label>
-      <select [ngModel]="selectedCategory()" (ngModelChange)="selectedCategory.set($event)" class="filter-select">
+      <select [(ngModel)]="selectedCategory" class="filter-select">
         <option value="">All Categories</option>
         <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
       </select>
@@ -32,7 +31,7 @@
     <!-- Occasion -->
     <div class="filter-group">
       <label>Occasion</label>
-      <select [ngModel]="selectedOccasion()" (ngModelChange)="selectedOccasion.set($event)" class="filter-select">
+      <select [(ngModel)]="selectedOccasion" class="filter-select">
         <option value="">All Occasions</option>
         <option *ngFor="let occ of occasions" [value]="occ">{{ occ }}</option>
       </select>
@@ -41,7 +40,7 @@
     <!-- Condition -->
     <div class="filter-group">
       <label>Condition</label>
-      <select [ngModel]="selectedCondition()" (ngModelChange)="selectedCondition.set($event)" class="filter-select">
+      <select [(ngModel)]="selectedCondition" class="filter-select">
         <option value="">All Conditions</option>
         <option *ngFor="let cond of conditions" [value]="cond">{{ cond }}</option>
       </select>
@@ -54,8 +53,7 @@
         type="range" 
         min="100" 
         max="5000" 
-        [ngModel]="priceRange()"
-        (ngModelChange)="priceRange.set($event)"
+        [(ngModel)]="priceRange"
         class="price-slider"
       />
     </div>
@@ -63,7 +61,7 @@
     <!-- Sort -->
     <div class="filter-group">
       <label>Sort By</label>
-      <select [ngModel]="sortBy()" (ngModelChange)="sortBy.set($event)" class="filter-select">
+      <select [(ngModel)]="sortBy" class="filter-select">
         <option value="relevance">Relevance</option>
         <option value="price-low">Price: Low to High</option>
         <option value="price-high">Price: High to Low</option>
@@ -73,12 +71,6 @@
 
     <button (click)="clearFilters()" class="clear-btn">Clear All Filters</button>
   </aside>
-  <div
-    *ngIf="mobileFiltersOpen()"
-    class="mobile-filter-backdrop"
-    (click)="toggleMobileFilters()"
-    aria-hidden="true"
-  ></div>
 
   <!-- Main Content -->
   <div class="catalogue-main">
@@ -86,7 +78,7 @@
     <div class="catalogue-topbar">
       <div class="topbar-left">
         <a routerLink="/" class="back-btn">← Back to Home</a>
-        <h1>{{ selectedCategory() || 'Products' }}</h1>
+        <h1>Products</h1>
       </div>
       <button class="mobile-filter-toggle" (click)="toggleMobileFilters()">☰ Filters</button>
     </div>
@@ -101,10 +93,9 @@
       <div *ngFor="let product of filteredProducts()" class="product-card">
         <div class="product-image">
           <img [src]="product.image" [alt]="product.title" />
-          <span class="status-badge" [class.rented]="product.status === 'Rented'">
-            {{ product.status || 'Available' }}
+          <span *ngIf="product.status === 'Rented'" class="status-badge rented">
+            Rented
           </span>
-          <span class="condition-badge">{{ product.condition }}</span>
         </div>
         <div class="product-info">
           <p class="product-brand">{{ product.brand }}</p>

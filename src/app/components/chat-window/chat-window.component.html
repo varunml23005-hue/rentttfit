@@ -1,7 +1,10 @@
 <div class="chat-container">
 
   <!-- HEADER -->
-  <app-chat-header [chat]="chat"></app-chat-header>
+<app-chat-header
+  [chat]="chat"
+  (back)="goBack()">
+</app-chat-header>
 
   <!-- MESSAGES -->
   <div class="messages">

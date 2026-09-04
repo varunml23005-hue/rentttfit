@@ -1509,3 +1509,1069 @@
   }
 
 }
+
+
+
+
+
+
+/* =========================================================
+   RENTFITS HERO
+   DESKTOP VERSION
+========================================================= */
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  height: 516px;
+
+  overflow: hidden;
+
+  background: #f8cfd6;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   DESKTOP
+========================================================= */
+
+.hero-image {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 68%;
+  height: 100%;
+
+  background-image:
+    url('/images/rentfits-hero-bg.png');
+
+  background-repeat: no-repeat;
+
+  background-size: auto 100%;
+
+  background-position: left 43%;
+
+  background-color: #f8cfd6;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   IMAGE / BACKGROUND BLEND
+========================================================= */
+
+.hero-image::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 120px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(248, 207, 214, 0),
+      #f8cfd6
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: absolute;
+
+  left: 6.2%;
+  top: 50%;
+
+  width: 430px;
+
+  transform: translateY(-50%);
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero-content h1 {
+  margin: 0;
+
+  color: #111111;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 40px;
+
+  line-height: 1.08;
+
+  font-weight: 700;
+
+  letter-spacing: -1.3px;
+}
+
+
+.hero-content h2 {
+  margin: 3px 0 0;
+
+  color: #ed3f70;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 40px;
+
+  line-height: 1.08;
+
+  font-weight: 700;
+
+  letter-spacing: -1.3px;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-description {
+  margin: 25px 0 0;
+
+  color: #222222;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 17px;
+
+  line-height: 25px;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 27px;
+}
+
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+.primary-button,
+.secondary-button {
+  height: 49px;
+
+  padding: 0 26px;
+
+  border-radius: 6px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.primary-button {
+  border: none;
+
+  background: #ed3f70;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 12px
+    rgba(237, 63, 112, 0.20);
+}
+
+
+.primary-button:hover {
+  background: #d93261;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 16px
+    rgba(237, 63, 112, 0.28);
+}
+
+
+.primary-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.secondary-button {
+  border: 1px solid #999999;
+
+  background: #ffffff;
+
+  color: #222222;
+}
+
+
+.secondary-button:hover {
+  border-color: #ed3f70;
+
+  color: #ed3f70;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px
+    rgba(0, 0, 0, 0.08);
+}
+
+
+.secondary-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   VIRTUAL TRY-ON CARD
+   DESKTOP
+========================================================= */
+
+.try-on-card {
+  position: absolute;
+
+  top: 30px;
+
+  right: 3%;
+
+  width: 400px;
+
+  min-height: 250px;
+
+  box-sizing: border-box;
+
+  padding: 28px 26px;
+
+  background: #fffafa;
+
+  border: 1px solid #f0e5e8;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(80, 30, 45, 0.08);
+
+  z-index: 20;
+}
+
+
+/* =========================================================
+   TRY-ON TITLE
+========================================================= */
+
+.try-on-card h3 {
+  margin: 0;
+
+  color: #171717;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 25px;
+
+  line-height: 30px;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   TRY-ON SUBTITLE
+========================================================= */
+
+.try-on-subtitle {
+  margin:
+    10px
+    0
+    27px;
+
+  color: #666666;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 18px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   TRY-ON STEPS
+========================================================= */
+
+.try-on-steps {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+
+.try-step {
+  width: 92px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   STEP ICON
+========================================================= */
+
+.step-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 9px;
+
+  border-radius: 50%;
+
+  background: #ffe7ee;
+
+  color: #ed3f70;
+
+  font-size: 21px;
+}
+
+
+.try-step strong {
+  color: #222222;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 11px;
+
+  line-height: 15px;
+
+  font-weight: 700;
+}
+
+
+.try-step small {
+  margin-top: 5px;
+
+  color: #777777;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 8px;
+
+  line-height: 11px;
+}
+
+
+.step-arrow {
+  color: #cccccc;
+
+  font-size: 20px;
+
+  line-height: 20px;
+}
+
+
+/* =========================================================
+   EARN BY RENTING
+   DESKTOP
+========================================================= */
+
+.earn-renting-card {
+  position: absolute;
+
+  top: 300px;
+
+  right: 3%;
+
+  width: 400px;
+
+  height: 175px;
+
+  box-sizing: border-box;
+
+  padding: 22px 24px;
+
+  background: #fffafa;
+
+  border: 1px solid #f0e5e8;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(80, 30, 45, 0.08);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  overflow: hidden;
+
+  z-index: 20;
+}
+
+
+.earn-renting-text {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.earn-renting-text h3 {
+  margin: 0 0 8px;
+
+  color: #222222;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 22px;
+
+  line-height: 27px;
+
+  font-weight: 700;
+}
+
+
+.earn-renting-text p {
+  margin: 0 0 14px;
+
+  max-width: 190px;
+
+  color: #555555;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+
+  line-height: 17px;
+}
+
+
+.earn-renting-text button {
+  border: none;
+
+  background: #ed3f70;
+
+  color: #ffffff;
+
+  padding: 9px 16px;
+
+  border-radius: 6px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.earn-renting-image {
+  width: 165px;
+
+  height: 150px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+.earn-renting-image img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  object-position: center bottom;
+}
+
+
+/* =========================================================
+   =========================================================
+   MOBILE ONLY
+   DESKTOP ABOVE IS NOT CHANGED
+   =========================================================
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* =======================================================
+     MOBILE HERO
+  ======================================================= */
+
+  .hero {
+    position: relative !important;
+
+    width: 100% !important;
+
+    height: 315px !important;
+
+    min-height: 315px !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    overflow: hidden !important;
+
+    background: #f8cbd3 !important;
+
+    border-radius: 0 0 12px 12px !important;
+
+    box-sizing: border-box !important;
+  }
+
+
+  /* =======================================================
+     MOBILE HERO IMAGE
+     
+     FULL IMAGE
+     MODEL MOVED TO 55%
+  ======================================================= */
+
+ /* ===========================
+   MOBILE HERO IMAGE ONLY
+=========================== */
+@media (max-width: 768px) {
+
+  .hero-image {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    /* NEW MOBILE IMAGE */
+    background-image: url('/images/rentfit-bg.png') !important;
+
+    background-repeat: no-repeat !important;
+
+    /* Crop instead of enlarging */
+    background-size: auto 100% !important;
+
+    /* Adjust horizontally */
+    background-position: 72% center !important;
+
+    background-color: #f8cbd3 !important;
+
+    z-index: 1 !important;
+  }
+
+  /* Remove desktop fade & dots */
+  .hero-image::after {
+    display: none !important;
+  }
+
+  .hero-dots {
+    display: none !important;
+  }
+}
+
+
+  /* =======================================================
+     REMOVE DESKTOP IMAGE OVERLAY
+  ======================================================= */
+
+  .hero-image::after {
+    display: none !important;
+  }
+
+
+  /* =======================================================
+     MOBILE CONTENT
+  ======================================================= */
+
+  .hero-content {
+    position: absolute !important;
+
+    top: 0 !important;
+
+    left: 0 !important;
+
+    width: 57% !important;
+
+    height: 100% !important;
+
+    margin: 0 !important;
+
+    padding:
+      47px
+      5px
+      15px
+      20px !important;
+
+    transform: none !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: flex-start !important;
+
+    justify-content: flex-start !important;
+
+    text-align: left !important;
+
+    background: transparent !important;
+
+    box-sizing: border-box !important;
+
+    z-index: 5 !important;
+  }
+
+
+  /* =======================================================
+     MOBILE TITLE
+  ======================================================= */
+
+  .hero-content h1 {
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    color: #111111 !important;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif !important;
+
+    font-size: 23px !important;
+
+    line-height: 1.1 !important;
+
+    font-weight: 700 !important;
+
+    letter-spacing: -0.6px !important;
+
+    text-align: left !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* =======================================================
+     PINK TITLE
+  ======================================================= */
+
+  .hero-content h2 {
+    width: 100% !important;
+
+    margin: 4px 0 0 !important;
+
+    padding: 0 !important;
+
+    color: #ed3f70 !important;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif !important;
+
+    font-size: 23px !important;
+
+    line-height: 1.04 !important;
+
+    font-weight: 700 !important;
+
+    letter-spacing: -0.5px !important;
+
+    text-align: left !important;
+
+    white-space: normal !important;
+  }
+
+
+  /* =======================================================
+     DESCRIPTION
+  ======================================================= */
+
+  .hero-description {
+    width: 100% !important;
+
+    max-width: 190px !important;
+
+    margin: 13px 0 0 !important;
+
+    padding: 0 !important;
+
+    color: #222222 !important;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif !important;
+
+    font-size: 9px !important;
+
+    line-height: 1.5 !important;
+
+    text-align: left !important;
+
+    box-sizing: border-box !important;
+  }
+
+
+  /* =======================================================
+     BUTTONS
+  ======================================================= */
+
+  .hero-buttons {
+    width: 100% !important;
+
+    margin: 14px 0 0 !important;
+
+    padding: 0 !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: flex-start !important;
+
+    justify-content: flex-start !important;
+
+    gap: 6px !important;
+
+    box-sizing: border-box !important;
+  }
+
+
+  .primary-button,
+  .secondary-button {
+    width: 175px !important;
+
+    max-width: 175px !important;
+
+    height: 38px !important;
+
+    min-height: 38px !important;
+
+    padding: 0 10px !important;
+
+    border-radius: 6px !important;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif !important;
+
+    font-size: 9.5px !important;
+
+    font-weight: 700 !important;
+
+    box-sizing: border-box !important;
+
+    cursor: pointer;
+  }
+
+
+  /* =======================================================
+     PRIMARY BUTTON
+  ======================================================= */
+
+  .primary-button {
+    border: none !important;
+
+    background: #ed3f70 !important;
+
+    color: #ffffff !important;
+
+    box-shadow: none !important;
+  }
+
+
+  .primary-button:hover {
+    background: #ed3f70 !important;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+  }
+
+
+  /* =======================================================
+     SECONDARY BUTTON
+  ======================================================= */
+
+  .secondary-button {
+    border: 1px solid #555555 !important;
+
+    background: #ffffff !important;
+
+    color: #222222 !important;
+
+    box-shadow: none !important;
+  }
+
+
+  .secondary-button:hover {
+    border-color: #555555 !important;
+
+    color: #222222 !important;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+  }
+
+
+  /* =======================================================
+     REMOVE MOBILE DOTS
+  ======================================================= */
+
+  .hero-dots {
+    display: none !important;
+  }
+
+
+  /* =======================================================
+     HIDE DESKTOP CARDS ON MOBILE
+  ======================================================= */
+
+  .try-on-card,
+  .earn-renting-card {
+    display: none !important;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .hero {
+    height: 315px !important;
+
+    min-height: 315px !important;
+  }
+
+
+  /* =======================================================
+     MOBILE IMAGE
+     55% POSITION
+  ======================================================= */
+
+  .hero-image {
+    width: 100% !important;
+
+    height: 100% !important;
+
+    background-size: cover !important;
+
+    background-position: 55% center !important;
+  }
+
+
+  /* =======================================================
+     MOBILE CONTENT
+  ======================================================= */
+
+  .hero-content {
+    width: 57% !important;
+
+    height: 100% !important;
+
+    padding:
+      47px
+      5px
+      15px
+      20px !important;
+  }
+
+
+  /* =======================================================
+     TITLE
+  ======================================================= */
+
+  .hero-content h1 {
+    font-size: 23px !important;
+
+    line-height: 1.1 !important;
+  }
+
+
+  .hero-content h2 {
+    font-size: 23px !important;
+
+    line-height: 1.04 !important;
+
+    margin-top: 4px !important;
+  }
+
+
+  /* =======================================================
+     DESCRIPTION
+  ======================================================= */
+
+  .hero-description {
+    max-width: 190px !important;
+
+    margin-top: 13px !important;
+
+    font-size: 9px !important;
+
+    line-height: 1.5 !important;
+  }
+
+
+  /* =======================================================
+     BUTTONS
+  ======================================================= */
+
+  .hero-buttons {
+    margin-top: 14px !important;
+
+    gap: 6px !important;
+  }
+
+
+  .primary-button,
+  .secondary-button {
+    width: 175px !important;
+
+    max-width: 175px !important;
+
+    height: 38px !important;
+
+    min-height: 38px !important;
+
+    font-size: 9.5px !important;
+  }
+
+
+  /* =======================================================
+     NO DOTS
+  ======================================================= */
+
+  .hero-dots {
+    display: none !important;
+  }
+
+}

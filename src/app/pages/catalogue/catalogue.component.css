@@ -160,10 +160,6 @@
   font-weight: 600;
 }
 
-.mobile-filter-backdrop {
-  display: none;
-}
-
 .results-info {
   margin-bottom: 1.5rem;
   padding: 0.75rem 1rem;
@@ -224,31 +220,38 @@
 
 .status-badge {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #4caf50;
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.status-badge.rented {
+  top: 12px;
+  right: 12px;
   background: #ff6b6b;
+  color: white;
+  padding: 0.45rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.68rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 2;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
 }
 
 .condition-badge {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(0, 0, 0, 0.6);
+  top: 58px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.65);
   color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  padding: 0.45rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.68rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  z-index: 2;
+  max-width: calc(100% - 24px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
 }
 
 .product-info {
@@ -380,23 +383,11 @@
 
   .filters-sidebar {
     position: static;
+    width: auto;
     max-width: none;
-    width: 100%;
     height: auto;
     border-radius: 8px;
-    transform: none;
-    transition: none;
     overflow: visible;
-    padding: 1rem;
-  }
-
-  .filters-sidebar.mobile-open {
-    transform: none;
-    box-shadow: none;
-  }
-
-  .mobile-filter-backdrop {
-    display: none;
   }
 
   .close-filters {

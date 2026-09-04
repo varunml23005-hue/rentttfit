@@ -1,5 +1,5 @@
 /* =========================================================
-   RENTFITS DESKTOP HEADER
+   RENTFITS HEADER
 ========================================================= */
 
 :host {
@@ -38,8 +38,7 @@
 
 
 /* =========================================================
-   RENTFITS LOGO
-   NO HOVER EFFECT
+   LOGO
 ========================================================= */
 
 .brand {
@@ -65,11 +64,6 @@
 
   transform: none;
 }
-
-
-/*
-   Prevent ANY hover effect on the logo area.
-*/
 
 .brand:hover,
 .brand:focus,
@@ -101,7 +95,6 @@
   margin-right: 7px;
 }
 
-
 .hanger-logo svg {
   width: 58px;
   height: 58px;
@@ -113,7 +106,7 @@
 
 
 /* =========================================================
-   RENTFITS TEXT
+   BRAND TEXT
 ========================================================= */
 
 .brand-text {
@@ -123,12 +116,6 @@
 
   justify-content: center;
 }
-
-
-/*
-   RENTFITS TITLE
-   Completely static.
-*/
 
 .brand-name {
   margin: 0;
@@ -145,22 +132,11 @@
   transition: none;
 }
 
-
-/*
-   IMPORTANT:
-   RENTFITS DOES NOT CHANGE ON HOVER.
-*/
-
 .brand-name:hover {
   color: #111111;
 
   transform: none;
 }
-
-
-/* =========================================================
-   TAGLINE
-========================================================= */
 
 .brand-tagline {
   margin-top: 2px;
@@ -172,7 +148,6 @@
 
   transition: none;
 }
-
 
 .brand-tagline:hover {
   color: #777777;
@@ -208,14 +183,12 @@
     box-shadow 0.2s ease;
 }
 
-
 .search-container:focus-within {
   border-color: #ed3f70;
 
   box-shadow:
     0 0 0 2px rgba(237, 63, 112, 0.08);
 }
-
 
 .search-container input {
   flex: 1;
@@ -239,7 +212,6 @@
 
   font-size: 14px;
 }
-
 
 .search-container input::placeholder {
   color: #999999;
@@ -271,54 +243,30 @@
     transform 0.1s ease;
 }
 
-
 .search-button:hover {
   background: #d93261;
 }
-
 
 .search-button:active {
   transform: scale(0.98);
 }
 
+.search-button svg {
+  width: 21px;
+  height: 21px;
 
-/* Search icon */
+  fill: none;
 
-.search-icon {
-  position: relative;
+  stroke: #ffffff;
 
-  display: block;
+  stroke-width: 2;
 
-  width: 14px;
-  height: 14px;
-
-  border: 2px solid #ffffff;
-
-  border-radius: 50%;
-}
-
-
-.search-icon::after {
-  content: "";
-
-  position: absolute;
-
-  width: 7px;
-  height: 2px;
-
-  right: -5px;
-  bottom: -3px;
-
-  background: #ffffff;
-
-  border-radius: 2px;
-
-  transform: rotate(45deg);
+  stroke-linecap: round;
 }
 
 
 /* =========================================================
-   HEADER ACTIONS
+   DESKTOP HEADER ACTIONS
 ========================================================= */
 
 .header-actions {
@@ -334,11 +282,6 @@
 
   margin-left: 32px;
 }
-
-
-/* =========================================================
-   HEADER ACTION BUTTON
-========================================================= */
 
 .header-action {
   position: relative;
@@ -371,18 +314,15 @@
     transform 0.2s ease;
 }
 
-
 .header-action:hover {
   color: #ed3f70;
 
   transform: translateY(-2px);
 }
 
-
 .header-action:active {
   transform: translateY(0);
 }
-
 
 .header-action > span:last-child {
   margin-top: 6px;
@@ -436,7 +376,6 @@
   transition: border-color 0.2s ease;
 }
 
-
 .user-icon::after {
   content: "";
 
@@ -456,7 +395,6 @@
 
   transition: border-color 0.2s ease;
 }
-
 
 .header-action:hover .user-icon::before,
 .header-action:hover .user-icon::after {
@@ -479,7 +417,6 @@
   transition: border-color 0.2s ease;
 }
 
-
 .message-icon::after {
   content: "";
 
@@ -498,7 +435,6 @@
   transition: border-color 0.2s ease;
 }
 
-
 .header-action:hover .message-icon,
 .header-action:hover .message-icon::after {
   border-color: #ed3f70;
@@ -506,7 +442,7 @@
 
 
 /* =========================================================
-   HEART / WISHLIST
+   HEART
 ========================================================= */
 
 .heart-icon {
@@ -520,7 +456,6 @@
 
   transition: color 0.2s ease;
 }
-
 
 .header-action:hover .heart-icon {
   color: #ed3f70;
@@ -542,7 +477,6 @@
   transition: border-color 0.2s ease;
 }
 
-
 .orders-icon::before {
   content: "";
 
@@ -562,7 +496,6 @@
 
   transition: border-color 0.2s ease;
 }
-
 
 .header-action:hover .orders-icon,
 .header-action:hover .orders-icon::before {
@@ -585,7 +518,6 @@
   transition: border-color 0.2s ease;
 }
 
-
 .cart-icon::before {
   content: "";
 
@@ -602,7 +534,6 @@
 
   transition: border-color 0.2s ease;
 }
-
 
 .cart-icon::after {
   content: "•  •";
@@ -623,12 +554,10 @@
   transition: color 0.2s ease;
 }
 
-
 .header-action:hover .cart-icon,
 .header-action:hover .cart-icon::before {
   border-color: #ed3f70;
 }
-
 
 .header-action:hover .cart-icon::after {
   color: #ed3f70;
@@ -691,7 +620,6 @@
   border-radius: 50%;
 }
 
-
 .signin-icon::after {
   content: "";
 
@@ -734,7 +662,6 @@
   background: #ffffff;
 }
 
-
 .main-navigation button {
   position: relative;
 
@@ -761,7 +688,6 @@
   transition: color 0.2s ease;
 }
 
-
 .main-navigation button::after {
   content: "";
 
@@ -782,36 +708,34 @@
   transition: transform 0.2s ease;
 }
 
-
 .main-navigation button:hover {
   color: #ed3f70;
 }
-
 
 .main-navigation button:hover::after {
   transform: scaleX(1);
 }
 
-
 .main-navigation button:active {
   transform: scale(0.98);
 }
+
+
 /* =========================================================
-   LOCATION DROPDOWN
+   LOCATION DROPDOWN - DESKTOP
 ========================================================= */
 
 .location-dropdown {
   position: relative;
+
   display: flex;
+
   align-items: center;
 }
 
 .location-action {
   position: relative;
 }
-
-
-/* DROPDOWN MENU */
 
 .location-menu {
   position: absolute;
@@ -824,29 +748,21 @@
   background: #ffffff;
 
   border: 1px solid #eeeeee;
+
   border-radius: 10px;
 
   box-shadow:
-    0 8px 25px
-    rgba(0, 0, 0, 0.12);
+    0 8px 25px rgba(0, 0, 0, 0.12);
 
   padding: 8px 0;
 
   z-index: 1000;
 }
 
-
-/* DROPDOWN TITLE */
-
 .location-menu-title {
   padding: 10px 16px;
 
   color: #222222;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
 
   font-size: 13px;
 
@@ -856,9 +772,6 @@
 
   margin-bottom: 4px;
 }
-
-
-/* LOCATION OPTIONS */
 
 .location-menu button {
   display: block;
@@ -873,11 +786,6 @@
 
   color: #333333;
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
   font-size: 13px;
 
   text-align: left;
@@ -885,14 +793,13 @@
   cursor: pointer;
 }
 
-
-/* HOVER */
-
 .location-menu button:hover {
   background: #fff0f4;
 
   color: #ed3f70;
 }
+
+
 /* =========================================================
    LOCATION ICON
 ========================================================= */
@@ -902,14 +809,12 @@
   height: 22px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
   position: relative;
 }
-
-
-/* PIN */
 
 .location-pin {
   width: 13px;
@@ -926,9 +831,6 @@
   display: block;
 }
 
-
-/* CENTER DOT */
-
 .location-pin::after {
   content: "";
 
@@ -943,358 +845,168 @@
 
   top: 3px;
   left: 3px;
+}
 
-  .mobile-menu {
+
+/* =========================================================
+   MOBILE ELEMENTS
+   HIDDEN ON DESKTOP
+========================================================= */
+
+.mobile-menu-button,
+.mobile-header-actions,
+.mobile-menu,
+.mobile-menu-overlay {
   display: none;
 }
-}
+
+
 /* =========================================================
-   RENTFITS MOBILE HEADER
+   MOBILE
 ========================================================= */
 
 @media (max-width: 768px) {
 
+  /* =====================================================
+     HEADER
+  ====================================================== */
+
   .site-header {
     width: 100%;
-    min-width: 0;
-    overflow: hidden;
+
+    overflow: visible;
   }
 
-  /* ---------------------------------------------------------
-     TOP HEADER
-  --------------------------------------------------------- */
+
+  /* =====================================================
+     HEADER MAIN
+  ====================================================== */
 
   .header-main {
-    width: 100%;
     height: auto;
 
+    min-height: 70px;
+
     display: grid;
-    grid-template-columns: 1fr auto;
 
-    padding: 14px 16px;
+    grid-template-columns: 40px 1fr auto;
 
-    box-sizing: border-box;
+    grid-template-rows: auto auto;
+
+    align-items: center;
+
+    padding: 8px 12px;
+
+    gap: 4px 8px;
 
     border-bottom: 1px solid #eeeeee;
   }
 
 
-  /* ---------------------------------------------------------
-     LOGO
-  --------------------------------------------------------- */
+  /* =====================================================
+     HAMBURGER
+  ====================================================== */
 
-  .brand {
-    width: auto;
-    height: 58px;
+  .mobile-menu-button {
+    width: 36px;
+    height: 36px;
 
     display: flex;
+
+    flex-direction: column;
+
     align-items: center;
+    justify-content: center;
+
+    gap: 4px;
 
     padding: 0;
 
-    grid-column: 1;
-    grid-row: 1;
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+  }
+
+  .mobile-menu-button span {
+    display: block;
+
+    width: 22px;
+    height: 2px;
+
+    border-radius: 2px;
+
+    background: #111111;
+  }
+
+
+  /* =====================================================
+     MOBILE LOGO
+  ====================================================== */
+
+  .brand {
+    width: auto;
+    height: 50px;
+
+    justify-self: start;
+
+    min-width: 0;
   }
 
   .hanger-logo {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
 
     margin-right: 5px;
   }
 
   .hanger-logo svg {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
   }
 
   .brand-name {
-    font-size: 24px;
-    line-height: 27px;
+    font-size: 20px;
+
+    line-height: 22px;
+
+    letter-spacing: -0.5px;
   }
 
   .brand-tagline {
-    font-size: 9px;
-    line-height: 12px;
+    margin-top: 1px;
+
+    font-size: 7px;
+
+    line-height: 9px;
   }
 
 
-  /* ---------------------------------------------------------
-     MOBILE MENU BUTTON AREA
-  --------------------------------------------------------- */
+  /* =====================================================
+     MOBILE HEADER ICONS
+  ====================================================== */
 
-  .header-actions {
-    grid-column: 2;
-    grid-row: 1;
-
-    min-width: 0;
-
-    width: auto;
-
-    margin-left: 0;
-
+  .mobile-header-actions {
     display: flex;
+
     align-items: center;
+
     justify-content: flex-end;
 
-    gap: 0;
+    gap: 8px;
   }
 
+  .mobile-header-icon {
+    position: relative;
 
-  /* Hide desktop action items */
-
-  .header-actions .header-action {
-    display: none;
-  }
-
-
-  /* ---------------------------------------------------------
-     SEARCH
-  --------------------------------------------------------- */
-
-  .search-container {
-    grid-column: 1 / -1;
-    grid-row: 2;
-
-    width: 100%;
-
-    max-width: none;
-
-    height: 48px;
-
-    margin: 12px 0 0;
-
-    box-sizing: border-box;
-
-    border-radius: 10px;
-  }
-
-  .search-container input {
-    font-size: 14px;
-
-    padding: 0 16px;
-
-    min-width: 0;
-  }
-
-  .search-button {
-    width: 52px;
-    height: 48px;
-  }
-
-
-  /* ---------------------------------------------------------
-     MOBILE MENU BUTTON
-  --------------------------------------------------------- */
-
-  .mobile-menu-button {
-    width: 42px;
-    height: 42px;
+    width: 34px;
+    height: 34px;
 
     display: flex;
-
-    flex-direction: column;
 
     align-items: center;
     justify-content: center;
-
-    gap: 6px;
-
-    border: none;
-
-    background: transparent;
-
-    cursor: pointer;
-  }
-
-  .mobile-menu-button span {
-    display: block;
-
-    width: 22px;
-    height: 2px;
-
-    background: #111111;
-
-    border-radius: 2px;
-  }
-
-
-  /* ---------------------------------------------------------
-     NAVIGATION
-  --------------------------------------------------------- */
-
-  .main-navigation {
-    width: 100%;
-
-    height: 56px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 30px;
-
-    padding: 0 18px;
-
-    box-sizing: border-box;
-
-    overflow-x: auto;
-
-    overflow-y: hidden;
-
-    white-space: nowrap;
-
-    scrollbar-width: none;
-  }
-
-  .main-navigation::-webkit-scrollbar {
-    display: none;
-  }
-
-  .main-navigation button {
-    flex-shrink: 0;
-
-    height: 56px;
-
-    font-size: 14px;
-  }
-
-
-  /* ---------------------------------------------------------
-     LOCATION DROPDOWN
-  --------------------------------------------------------- */
-
-  .location-menu {
-    position: fixed;
-
-    top: 120px;
-    right: 16px;
-
-    width: 190px;
-
-    max-width: calc(100vw - 32px);
-
-    z-index: 9999;
-  }
-
-}
-/* =========================================================
-   MOBILE MENU BUTTON
-========================================================= */
-
-.mobile-menu-button {
-  display: none;
-}
-/* =========================================================
-   MOBILE HEADER
-========================================================= */
-
-@media (max-width: 768px) {
-
-  .site-header {
-    width: 100%;
-    min-width: 0;
-    overflow: hidden;
-  }
-
-  .header-main {
-    width: 100%;
-    height: auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr auto;
-
-    padding: 14px 16px;
-
-    box-sizing: border-box;
-  }
-
-
-  /* LOGO */
-
-  .brand {
-    width: auto;
-    height: 58px;
-
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-
-  .hanger-logo {
-    width: 48px;
-    height: 48px;
-
-    margin-right: 5px;
-  }
-
-
-  .hanger-logo svg {
-    width: 48px;
-    height: 48px;
-  }
-
-
-  .brand-name {
-    font-size: 24px;
-    line-height: 27px;
-  }
-
-
-  .brand-tagline {
-    font-size: 9px;
-    line-height: 12px;
-  }
-
-
-  /* SEARCH */
-
-  .search-container {
-    grid-column: 1 / -1;
-    grid-row: 2;
-
-    width: 100%;
-    max-width: none;
-
-    height: 48px;
-
-    margin: 12px 0 0;
-
-    box-sizing: border-box;
-  }
-
-
-  .search-container input {
-    font-size: 14px;
-
-    padding: 0 16px;
-  }
-
-
-  .search-button {
-    width: 52px;
-    height: 48px;
-  }
-
-
-  /* HAMBURGER */
-
-  .mobile-menu-button {
-    grid-column: 2;
-    grid-row: 1;
-
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 6px;
 
     padding: 0;
 
@@ -1302,43 +1014,110 @@
 
     background: transparent;
 
+    color: #111111;
+
     cursor: pointer;
   }
 
+  .mobile-header-icon svg {
+    width: 21px;
+    height: 21px;
 
-  .mobile-menu-button span {
-    display: block;
+    fill: none;
 
-    width: 22px;
-    height: 2px;
+    stroke: #111111;
 
-    background: #111111;
+    stroke-width: 1.7;
 
-    border-radius: 2px;
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+  }
+
+  .mobile-cart-badge {
+    position: absolute;
+
+    top: 1px;
+    right: 0;
+
+    width: 15px;
+    height: 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ed3f70;
+
+    color: #ffffff;
+
+    font-size: 8px;
+
+    font-weight: 700;
   }
 
 
-  /* HIDE DESKTOP ACTIONS */
+  /* =====================================================
+     SEARCH
+  ====================================================== */
+
+  .search-container {
+    grid-column: 1 / -1;
+
+    grid-row: 2;
+
+    width: 100%;
+
+    height: 42px;
+
+    max-width: none;
+
+    margin: 4px 0 0;
+
+    border-radius: 8px;
+  }
+
+  .search-container input {
+    padding: 0 12px;
+
+    font-size: 12px;
+  }
+
+  .search-button {
+    width: 46px;
+    height: 42px;
+  }
+
+  .search-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  /* =====================================================
+     HIDE DESKTOP ACTIONS
+  ====================================================== */
 
   .header-actions {
     display: none;
   }
 
 
-  /* NAVIGATION */
+  /* =====================================================
+     HIDE DESKTOP NAVIGATION
+  ====================================================== */
 
   .main-navigation {
-    width: 100%;
-
-    height: 56px;
-
     display: flex;
 
-    align-items: center;
+    height: 42px;
 
-    gap: 30px;
+    gap: 25px;
 
-    padding: 0 18px;
+    padding: 0 12px;
 
     overflow-x: auto;
 
@@ -1347,52 +1126,156 @@
     white-space: nowrap;
 
     scrollbar-width: none;
-  }
 
+    border-bottom: 1px solid #eeeeee;
+  }
 
   .main-navigation::-webkit-scrollbar {
     display: none;
   }
 
-
   .main-navigation button {
     flex-shrink: 0;
 
-    height: 56px;
+    height: 42px;
 
-    font-size: 14px;
+    font-size: 11px;
   }
 
-}
-  /* =========================================================
-     MOBILE MENU
-  ========================================================= */
+
+  /* =====================================================
+     MOBILE MENU OVERLAY
+  ====================================================== */
+
+  .mobile-menu-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: 9998;
+
+    animation: mobileOverlayFade 0.2s ease;
+  }
+
+
+  /* =====================================================
+     MOBILE SIDE MENU
+  ====================================================== */
 
   .mobile-menu {
-    width: 100%;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: min(82vw, 330px);
+
+    height: 100vh;
 
     display: flex;
+
     flex-direction: column;
+
+    overflow-y: auto;
+
+    padding: 0 16px 30px;
+
+    box-sizing: border-box;
 
     background: #ffffff;
 
-    border-bottom: 1px solid #eeeeee;
-
     box-shadow:
-      0 6px 15px rgba(0, 0, 0, 0.08);
+      5px 0 25px rgba(0, 0, 0, 0.15);
 
-    position: relative;
+    z-index: 9999;
 
-    z-index: 999;
+    animation: mobileMenuSlide 0.25s ease;
   }
 
 
-  .mobile-menu button {
+  /* =====================================================
+     MENU HEADER
+  ====================================================== */
+
+  .mobile-menu-header {
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    flex-shrink: 0;
+
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .mobile-menu-title {
+    color: #111111;
+
+    font-size: 20px;
+
+    font-weight: 700;
+  }
+
+  .mobile-menu-close {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f7f7f7;
+
+    color: #333333;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    cursor: pointer;
+  }
+
+
+  /* =====================================================
+     COMMON MOBILE MENU ITEM
+  ====================================================== */
+
+  .mobile-menu-item {
+    position: relative;
+
     width: 100%;
 
-    min-height: 48px;
+    min-height: 52px;
 
-    padding: 0 20px;
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 6px;
+
+    box-sizing: border-box;
 
     border: none;
 
@@ -1400,373 +1283,185 @@
 
     background: #ffffff;
 
-    color: #111111;
+    color: #222222;
 
-    font-family:
-      Arial,
-      Helvetica,
-      sans-serif;
-
-    font-size: 15px;
-
-    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
 
     text-align: left;
 
     cursor: pointer;
   }
 
-
-  .mobile-menu button:hover {
-    background: #fff0f4;
-
-    color: #ed3f70;
+  .mobile-menu-item:active {
+    background: #fff4f7;
   }
 
- /* =========================================================
-   MOBILE MENU
-   HIDDEN ON DESKTOP
-========================================================= */
 
-.mobile-menu {
-  display: none;
-}
-/* =========================================================
-   MOBILE RESPONSIVE HEADER
-========================================================= */
+  /* =====================================================
+     MENU ICON
+  ====================================================== */
 
-@media (max-width: 768px) {
+  .mobile-menu-item-icon {
+    width: 30px;
 
-  /* -------------------------------------------------------
-     SITE HEADER
-  ------------------------------------------------------- */
+    display: flex;
 
-  .site-header {
-    min-width: 0;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #ed3f70;
+
+    font-size: 17px;
+  }
+
+
+  /* =====================================================
+     MENU TEXT
+  ====================================================== */
+
+  .mobile-menu-item-text {
+    flex: 1;
+
+    color: #222222;
+
+    font-size: 13px;
+
+    font-weight: 500;
+  }
+
+
+  /* =====================================================
+     MENU ARROW
+  ====================================================== */
+
+  .mobile-menu-arrow {
+    color: #999999;
+
+    font-size: 21px;
+
+    line-height: 1;
+  }
+
+
+  /* =====================================================
+     LOCATION
+  ====================================================== */
+
+  .mobile-menu-location {
     width: 100%;
   }
 
-
-  /* -------------------------------------------------------
-     TOP HEADER
-  ------------------------------------------------------- */
-
-  .header-main {
-    height: auto;
-    min-height: 80px;
-
-    padding: 12px 16px;
-
-    display: grid;
-
-    grid-template-columns: 1fr auto;
-
-    grid-template-areas:
-      "brand menu"
-      "search search";
-
-    gap: 12px;
-  }
-
-
-  /* -------------------------------------------------------
-     LOGO
-  ------------------------------------------------------- */
-
-  .brand {
-    grid-area: brand;
-
-    width: auto;
-    height: 55px;
-
-    justify-self: start;
-  }
-
-
-  .hanger-logo {
-    width: 48px;
-    height: 48px;
-
-    margin-right: 6px;
-  }
-
-
-  .hanger-logo svg {
-    width: 48px;
-    height: 48px;
-  }
-
-
-  .brand-name {
-    font-size: 24px;
-    line-height: 26px;
-  }
-
-
-  .brand-tagline {
-    font-size: 9px;
-    line-height: 11px;
-  }
-
-
-  /* -------------------------------------------------------
-     HAMBURGER BUTTON
-  ------------------------------------------------------- */
-
-  .mobile-menu-button {
-    grid-area: menu;
-
-    width: 42px;
-    height: 42px;
+  .mobile-menu-item-content {
+    flex: 1;
 
     display: flex;
 
     flex-direction: column;
 
-    align-items: center;
-    justify-content: center;
+    gap: 2px;
+  }
 
-    gap: 5px;
+  .mobile-menu-item-content .mobile-menu-item-text {
+    flex: none;
+  }
 
-    padding: 0;
+  .mobile-menu-item-content small {
+    color: #888888;
+
+    font-size: 9px;
+  }
+
+
+  /* =====================================================
+     LOCATION OPTIONS
+  ====================================================== */
+
+  .mobile-location-menu {
+    width: 100%;
+
+    padding: 5px 0 8px 42px;
+
+    box-sizing: border-box;
+
+    background: #fafafa;
+
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .mobile-location-menu button {
+    width: 100%;
+
+    padding: 9px 10px;
 
     border: none;
 
     background: transparent;
 
-    cursor: pointer;
-  }
-
-
-  .mobile-menu-button span {
-    display: block;
-
-    width: 23px;
-    height: 2px;
-
-    background: #111111;
-
-    border-radius: 2px;
-  }
-
-
-  /* -------------------------------------------------------
-     SEARCH
-  ------------------------------------------------------- */
-
-  .search-container {
-    grid-area: search;
-
-    width: 100%;
-    max-width: none;
-
-    height: 48px;
-
-    margin-left: 0;
-
-    border-radius: 10px;
-  }
-
-
-  .search-container input {
-    font-size: 14px;
-
-    padding: 0 16px;
-  }
-
-
-  .search-button {
-    width: 52px;
-    height: 48px;
-  }
-
-
-  /* -------------------------------------------------------
-     DESKTOP ACTIONS HIDDEN ON MOBILE
-  ------------------------------------------------------- */
-
-  .header-actions {
-    display: none;
-  }
-
-
-  /* -------------------------------------------------------
-     DESKTOP NAVIGATION HIDDEN ON MOBILE
-  ------------------------------------------------------- */
-
-  .main-navigation {
-    display: none;
-  }
-
-
-  /* -------------------------------------------------------
-     MOBILE MENU
-  ------------------------------------------------------- */
-
-  .mobile-menu {
-    display: block;
-
-    width: 100%;
-
-    background: #ffffff;
-
-    border-top: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
-
-    box-shadow:
-      0 8px 20px rgba(0, 0, 0, 0.08);
-
-    position: relative;
-
-    z-index: 1000;
-  }
-
-
-  .mobile-menu > button {
-    display: flex;
-
-    align-items: center;
-
-    width: 100%;
-
-    min-height: 52px;
-
-    padding: 0 20px;
-
-    border: none;
-
-    border-bottom: 1px solid #eeeeee;
-
-    background: #ffffff;
-
-    color: #111111;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 15px;
-
-    font-weight: 600;
-
-    text-align: left;
-
-    cursor: pointer;
-  }
-
-
-  .mobile-menu > button:hover {
-    background: #fff4f7;
-
-    color: #ed3f70;
-  }
-
-
-  /* -------------------------------------------------------
-     MOBILE LOCATION
-  ------------------------------------------------------- */
-
-  .mobile-location-section {
-    width: 100%;
-
-    border-bottom: 1px solid #eeeeee;
-  }
-
-
-  .mobile-location-button {
-    display: flex;
-
-    align-items: center;
-
-    width: 100%;
-
-    min-height: 52px;
-
-    padding: 0 20px;
-
-    border: none;
-
-    background: #ffffff;
-
-    color: #111111;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 15px;
-
-    font-weight: 600;
-
-    text-align: left;
-
-    cursor: pointer;
-  }
-
-
-  .mobile-location-button:hover {
-    background: #fff4f7;
-
-    color: #ed3f70;
-  }
-
-
-  .mobile-location-icon {
-    width: 25px;
-
-    margin-right: 10px;
-
-    color: #ed3f70;
-
-    font-size: 21px;
-  }
-
-
-  .mobile-location-arrow {
-    margin-left: auto;
+    color: #555555;
 
     font-size: 11px;
 
-    color: #777777;
-  }
-
-
-  /* -------------------------------------------------------
-     MOBILE LOCATION OPTIONS
-  ------------------------------------------------------- */
-
-  .mobile-location-menu {
-    background: #fafafa;
-
-    border-top: 1px solid #eeeeee;
-  }
-
-
-  .mobile-location-menu button {
-    display: block;
-
-    width: 100%;
-
-    min-height: 45px;
-
-    padding: 0 55px;
-
-    border: none;
-
-    background: transparent;
-
-    color: #333333;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 14px;
-
     text-align: left;
 
     cursor: pointer;
   }
 
-
-  .mobile-location-menu button:hover {
+  .mobile-location-menu button:active {
     background: #fff0f4;
 
     color: #ed3f70;
+  }
+
+
+  /* =====================================================
+     SIGN IN / REGISTER
+  ====================================================== */
+
+  .mobile-login-item {
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #ed3f70;
+  }
+
+  .mobile-login-item .mobile-menu-item-icon,
+  .mobile-login-item .mobile-menu-item-text,
+  .mobile-login-item .mobile-menu-arrow {
+    color: #ffffff;
+  }
+
+
+  /* =====================================================
+     ANIMATIONS
+  ====================================================== */
+
+  @keyframes mobileMenuSlide {
+
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+
+  }
+
+  @keyframes mobileOverlayFade {
+
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+
   }
 
 }

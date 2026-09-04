@@ -1,12 +1,26 @@
-<div class="app-layout">
+<div
+  class="app-layout"
+  [class.mobile-chat-open]="isMobileChatOpen">
+
+
+  <!-- =========================================
+       CHAT LIST
+  ========================================== -->
 
   <app-sidebar
     [selectedChat]="selectedChat"
     (chatSelected)="onChatSelected($event)">
   </app-sidebar>
 
+
+  <!-- =========================================
+       CHAT WINDOW
+  ========================================== -->
+
   <app-chat-window
-    [chat]="selectedChat">
+    [chat]="selectedChat"
+    (back)="backToChatList()">
   </app-chat-window>
+
 
 </div>
