@@ -78,6 +78,15 @@
       <button class="btn btn-primary" (click)="toggleChat()">
         💬 {{ chatOpen() ? 'Close Chat' : 'Chat in RentFits' }}
       </button>
+      <button
+        type="button"
+        class="btn btn-wishlist"
+        [class.added]="wishlisted()"
+        [attr.aria-pressed]="wishlisted()"
+        (click)="toggleWishlist()"
+      >
+        {{ wishlisted() ? '♥ Added to Wishlist' : '♡ Add to Wishlist' }}
+      </button>
       <a class="btn btn-whatsapp" [href]="whatsappLink()" target="_blank" rel="noopener">
         Chat on WhatsApp
       </a>

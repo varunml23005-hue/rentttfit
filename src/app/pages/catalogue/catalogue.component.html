@@ -93,10 +93,9 @@
       <div *ngFor="let product of filteredProducts()" class="product-card">
         <div class="product-image">
           <img [src]="product.image" [alt]="product.title" />
-          <span class="status-badge" [class.rented]="product.status === 'Rented'">
-            {{ product.status || 'Available' }}
+          <span *ngIf="product.status === 'Rented'" class="status-badge rented">
+            Rented
           </span>
-          <span class="condition-badge">{{ product.condition }}</span>
         </div>
         <div class="product-info">
           <p class="product-brand">{{ product.brand }}</p>
