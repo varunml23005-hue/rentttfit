@@ -18,6 +18,14 @@ export const routes: Routes = [
   },
 
   {
+    path: 'about',
+    loadComponent: () =>
+      import('./pages/about/about.component')
+        .then((m) => m.AboutComponent),
+    title: 'About Us | RentFits',
+  },
+
+  {
     path: 'product/:id',
     loadComponent: () =>
       import('./pages/product-detail/product-detail.component')
